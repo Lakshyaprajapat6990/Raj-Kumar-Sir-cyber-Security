@@ -8,7 +8,7 @@ const certs = [
     code: 'CEH',
     title: 'Certified Ethical Hacker',
     issuer: 'EC-Council',
-    color: '#ff6b6b',
+    color: '#dc2626',
     desc: 'Globally recognized credential for penetration testing and ethical hacking methodologies.',
   },
   {
@@ -16,7 +16,7 @@ const certs = [
     code: 'CCNA',
     title: 'Cisco Certified Network Associate',
     issuer: 'Cisco Systems',
-    color: '#00d4ff',
+    color: '#d4f84a',
     desc: 'Validates networking fundamentals, security, automation, and programmability skills.',
   },
   {
@@ -24,7 +24,7 @@ const certs = [
     code: 'Linux+',
     title: 'Linux Server Security',
     issuer: 'CompTIA / LPIC',
-    color: '#00ff88',
+    color: '#6b8f00',
     desc: 'Expert-level Linux administration, hardening, and server security configuration.',
   },
   {
@@ -32,7 +32,7 @@ const certs = [
     code: 'SSL Expert',
     title: 'SSL/TLS Security Specialist',
     issuer: 'DigiCert / Sectigo',
-    color: '#f39c12',
+    color: '#a16207',
     desc: 'Proficiency in certificate lifecycle management, PKI infrastructure, and TLS protocols.',
   },
   {
@@ -40,15 +40,15 @@ const certs = [
     code: 'CloudSec',
     title: 'Cloud Security Professional',
     issuer: 'AWS / Azure / GCP',
-    color: '#9b59b6',
+    color: '#6b8f00',
     desc: 'Multi-cloud security architecture, compliance, and threat detection across major platforms.',
   },
   {
     Icon: Lock,
     code: 'Crypto',
     title: 'Cryptography Specialist',
-    issuer: 'ISC² / SANS',
-    color: '#00d4ff',
+    issuer: 'ISCÂ² / SANS',
+    color: '#d4f84a',
     desc: 'Advanced knowledge of cryptographic protocols, algorithms, and key management systems.',
   },
 ];
@@ -59,7 +59,7 @@ export default function Certifications() {
       <div className="container">
         <Animate type="fadeDown">
           <div className="section-header">
-            <span className="section-label">// credentials</span>
+            <span className="section-label">Credentials</span>
             <h2 className="section-title">Certifications <span>&amp; Credentials</span></h2>
             <p className="section-subtitle">
               Industry-recognized certifications validating expertise across cybersecurity domains
@@ -96,7 +96,7 @@ export default function Certifications() {
                   {cert.code}
                 </div>
 
-                <h3 style={{ fontFamily: 'var(--mono)', fontSize: 17, color: '#fff', marginBottom: 6 }}>
+                <h3 style={{ fontFamily: 'var(--mono)', fontSize: 17, color: 'var(--text)', marginBottom: 6 }}>
                   {cert.title}
                 </h3>
 

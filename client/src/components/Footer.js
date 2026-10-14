@@ -8,18 +8,18 @@ const linkTargets = ['services', 'skills', 'certifications', 'darkweb', 'process
 const serviceList = [
   'Cybersecurity Consulting',
   'Cryptography & PKI',
-  'Penetration Testing',
-  'Cloud Security',
+  'Penetration Testing (CEH)',
+  'Cloud Data Security',
   'SSL/TLS Management',
-  'Linux Hardening',
-  'Network Security',
+  'Linux Server Hardening',
+  'Network Security (CCNA)',
   'Dark Web Monitoring',
 ];
 
 const WHATSAPP_URL = `https://wa.me/919424054049?text=${encodeURIComponent('Hi Rajkumar, I would like to discuss a cybersecurity requirement.')}`;
 
 const contactDetails = [
-  { Icon: Mail, text: 'ceoraj@cybersecuritycloud.online', href: 'mailto:ceoraj@cybersecuritycloud.online' },
+  { Icon: Mail, text: 'inforaj@cybersecuritycloudai.com', href: 'mailto:inforaj@cybersecuritycloudai.com' },
   { Icon: Phone, text: '+91 94240 54049', href: 'tel:+919424054049' },
   { Icon: MapPin, text: 'India (Remote Worldwide)', href: null },
   { Icon: Zap, text: 'Response: <24 hours', href: null },
@@ -35,9 +35,10 @@ const socials = [
 export default function Footer() {
   return (
     <footer style={{
-      background: '#030306',
-      borderTop: '1px solid rgba(0,212,255,0.1)',
+      background: '#0a0c08',
+      borderTop: '1px solid rgba(212,248,74,0.18)',
       padding: '60px 0 0',
+      color: '#f4f5f1',
     }}>
       <div className="container">
         <div style={{
@@ -48,20 +49,26 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{
-              fontFamily: 'var(--mono)', fontSize: 22, color: '#fff',
+              fontFamily: 'var(--display)', fontSize: 22, fontWeight: 700, color: '#f4f5f1',
               marginBottom: 12, display: 'flex', alignItems: 'center', gap: 10,
             }}>
-              <Shield size={22} color="var(--cyan)" />
-              RAJKUMAR
-              <span style={{ color: 'var(--green)', fontSize: 12, marginLeft: 2 }}>SEC</span>
+              <div style={{
+                width: 36, height: 36, borderRadius: 10,
+                background: 'linear-gradient(135deg, #d4f84a, #b6d92a)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}>
+                <Shield size={18} color="#0a0c08" />
+              </div>
+              Rajkumar
+              <span style={{ color: '#d4f84a', fontSize: 12, marginLeft: 2, fontWeight: 600 }}>SECcloud</span>
             </div>
             <p style={{
-              fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--cyan)',
-              letterSpacing: 1, marginBottom: 16,
+              fontFamily: 'var(--sans)', fontSize: 12, color: '#d4f84a', fontWeight: 600,
+              letterSpacing: 1, marginBottom: 16, textTransform: 'uppercase',
             }}>
-              // Committed to Enhancing System Security and User Safety
+              Committed to Enhancing System Security and User Safety
             </p>
-            <p style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 24 }}>
+            <p style={{ fontSize: 14, color: 'rgba(244,245,241,0.72)', lineHeight: 1.7, marginBottom: 24 }}>
               Aspiring Cybersecurity Analyst | Ethical Hacker | Network Defense Specialist.
               Protecting your digital assets with certified expertise.
             </p>
@@ -70,17 +77,25 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: 12 }}>
               {socials.map(({ Icon, label, href }, i) => (
                 <a key={i} href={href} aria-label={label} style={{
-                  width: 40, height: 40, borderRadius: 8,
-                  background: 'rgba(0,212,255,0.06)',
-                  border: '1px solid var(--border)',
+                  width: 42, height: 42, borderRadius: 12,
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(212,248,74,0.22)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   textDecoration: 'none',
-                  transition: 'border-color 0.2s, box-shadow 0.2s',
+                  transition: 'border-color 0.2s, box-shadow 0.2s, background 0.2s',
                 }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--cyan)'; e.currentTarget.style.boxShadow = '0 0 12px rgba(0,212,255,0.2)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.boxShadow = 'none'; }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = '#d4f84a';
+                    e.currentTarget.style.background = 'rgba(212,248,74,0.12)';
+                    e.currentTarget.style.boxShadow = '0 0 16px rgba(212,248,74,0.2)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'rgba(212,248,74,0.22)';
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.04)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 >
-                  <Icon size={16} color="var(--muted)" />
+                  <Icon size={16} color="#f4f5f1" />
                 </a>
               ))}
             </div>
@@ -88,16 +103,19 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)', marginBottom: 20, letterSpacing: 1 }}>
-              QUICK LINKS
+            <h4 style={{
+              fontFamily: 'var(--display)', fontSize: 14, fontWeight: 700,
+              color: '#d4f84a', marginBottom: 20, letterSpacing: 0.5,
+            }}>
+              Quick Links
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {quickLinks.map((l, i) => (
-                <Link key={i} to={linkTargets[i]} spy smooth offset={-68} duration={600}
-                  style={{ fontSize: 15, color: 'var(--muted)', cursor: 'pointer', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
-                  onMouseLeave={e => e.target.style.color = 'var(--muted)'}>
-                  &rsaquo; {l}
+                <Link key={i} to={linkTargets[i]} spy smooth offset={-110} duration={600}
+                  style={{ fontSize: 15, color: 'rgba(244,245,241,0.78)', cursor: 'pointer', transition: 'color 0.2s' }}
+                  onMouseEnter={e => e.target.style.color = '#d4f84a'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(244,245,241,0.78)'}>
+                  › {l}
                 </Link>
               ))}
             </div>
@@ -105,46 +123,57 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)', marginBottom: 20, letterSpacing: 1 }}>
-              SERVICES
+            <h4 style={{
+              fontFamily: 'var(--display)', fontSize: 14, fontWeight: 700,
+              color: '#d4f84a', marginBottom: 20, letterSpacing: 0.5,
+            }}>
+              Services
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {serviceList.map((s, i) => (
-                <span key={i} style={{ fontSize: 15, color: 'var(--muted)' }}>&rsaquo; {s}</span>
+                <span key={i} style={{ fontSize: 15, color: 'rgba(244,245,241,0.72)' }}>› {s}</span>
               ))}
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)', marginBottom: 20, letterSpacing: 1 }}>
-              CONTACT
+            <h4 style={{
+              fontFamily: 'var(--display)', fontSize: 14, fontWeight: 700,
+              color: '#d4f84a', marginBottom: 20, letterSpacing: 0.5,
+            }}>
+              Contact
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {contactDetails.map(({ Icon, text, href }, i) => (
-                <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 15, color: 'var(--muted)' }}>
-                  <Icon size={14} color="var(--cyan)" strokeWidth={1.5} />
+                <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 15, color: 'rgba(244,245,241,0.78)' }}>
+                  <Icon size={15} color="#d4f84a" strokeWidth={1.8} />
                   {href
-                    ? <a href={href} style={{ color: 'var(--muted)', textDecoration: 'none' }}
-                        onMouseEnter={e => e.target.style.color = 'var(--cyan)'}
-                        onMouseLeave={e => e.target.style.color = 'var(--muted)'}>{text}</a>
+                    ? <a href={href} style={{ color: 'rgba(244,245,241,0.78)', textDecoration: 'none' }}
+                        onMouseEnter={e => e.target.style.color = '#d4f84a'}
+                        onMouseLeave={e => e.target.style.color = 'rgba(244,245,241,0.78)'}>{text}</a>
                     : <span>{text}</span>
                   }
                 </div>
               ))}
-              {/* WhatsApp */}
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.25)',
-                borderRadius: 8, padding: '8px 14px', textDecoration: 'none',
-                color: '#25d366', fontSize: 12, fontFamily: 'var(--mono)',
+                background: 'rgba(37,211,102,0.1)', border: '1px solid rgba(37,211,102,0.4)',
+                borderRadius: 10, padding: '10px 14px', textDecoration: 'none',
+                color: '#6ee7a0', fontSize: 13, fontFamily: 'var(--sans)', fontWeight: 600,
                 marginTop: 4, width: 'fit-content',
-                transition: 'box-shadow 0.2s',
+                transition: 'box-shadow 0.2s, background 0.2s',
               }}
-                onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 12px rgba(37,211,102,0.2)'}
-                onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+                onMouseEnter={e => {
+                  e.currentTarget.style.boxShadow = '0 0 16px rgba(37,211,102,0.25)';
+                  e.currentTarget.style.background = 'rgba(37,211,102,0.16)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.background = 'rgba(37,211,102,0.1)';
+                }}
               >
-                <MessageSquare size={14} color="#25d366" /> WhatsApp Us
+                <MessageSquare size={14} color="#6ee7a0" /> WhatsApp Us
               </a>
             </div>
           </div>
@@ -152,22 +181,26 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(0,212,255,0.08)', padding: '20px 24px' }}>
+      <div style={{
+        borderTop: '1px solid rgba(212,248,74,0.12)',
+        background: '#070906',
+        padding: '20px 24px',
+      }}>
         <div style={{
           maxWidth: '100%', margin: '0 auto',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: 12,
         }}>
-          <span style={{ fontSize: 14, color: 'var(--muted)', fontFamily: 'var(--mono)' }}>
-            &copy; 2026 Rajkumar | Cybersecurity Expert. All rights reserved.
+          <span style={{ fontSize: 14, color: 'rgba(244,245,241,0.65)', fontFamily: 'var(--sans)' }}>
+            © 2020 ISO 27001 Rajkumar | Cybersecurity Expert. All rights reserved.
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <div style={{
               width: 8, height: 8, borderRadius: '50%',
-              background: 'var(--green)', boxShadow: '0 0 8px var(--green)',
+              background: '#d4f84a', boxShadow: '0 0 8px rgba(212,248,74,0.55)',
               animation: 'pulse 2s infinite',
             }} />
-            <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--green)' }}>
+            <span style={{ fontFamily: 'var(--sans)', fontSize: 12, fontWeight: 600, color: '#d4f84a' }}>
               SYSTEM ONLINE
             </span>
           </div>

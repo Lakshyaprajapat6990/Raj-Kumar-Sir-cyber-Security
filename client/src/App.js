@@ -42,7 +42,7 @@ function GridCanvas() {
       dx: (Math.random() - 0.5) * 0.35,
       dy: (Math.random() - 0.5) * 0.35,
       alpha: Math.random() * 0.5 + 0.2,
-      color: Math.random() > 0.5 ? '0,212,255' : '0,255,136',
+      color: Math.random() > 0.5 ? '212,248,74' : '107,143,0',
     }));
 
     const resize = () => {
@@ -63,12 +63,12 @@ function GridCanvas() {
       ctx.lineWidth = 0.4;
       for (let x = -step + offset; x <= W + step; x += step) {
         const alpha = 0.03 + 0.015 * Math.sin(t * 0.008 + x * 0.01);
-        ctx.strokeStyle = `rgba(0,212,255,${alpha})`;
+        ctx.strokeStyle = `rgba(212,248,74,${alpha})`;
         ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
       }
       for (let y = -step + offset; y <= H + step; y += step) {
         const alpha = 0.03 + 0.015 * Math.sin(t * 0.008 + y * 0.01);
-        ctx.strokeStyle = `rgba(0,212,255,${alpha})`;
+        ctx.strokeStyle = `rgba(212,248,74,${alpha})`;
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
       }
 
@@ -94,7 +94,7 @@ function GridCanvas() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 120) {
-            ctx.strokeStyle = `rgba(0,212,255,${0.06 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(212,248,74,${0.06 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);

@@ -41,25 +41,25 @@ export default function AdminLogin() {
         position: 'relative', zIndex: 1,
         background: 'var(--card)', border: '1px solid var(--border)',
         borderRadius: 16, padding: '48px 40px', width: '100%', maxWidth: 420,
-        boxShadow: '0 0 60px rgba(0,212,255,0.08)',
+        boxShadow: '0 0 60px rgba(212,248,74,0.08)',
       }}>
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <div style={{
             width: 64, height: 64, borderRadius: '50%',
             border: '2px solid var(--cyan)',
-            boxShadow: '0 0 24px rgba(0,212,255,0.3)',
-            background: 'rgba(0,212,255,0.08)',
+            boxShadow: '0 0 24px rgba(212,248,74,0.3)',
+            background: 'rgba(212,248,74,0.08)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 16px',
           }}>
             <Shield size={28} color="var(--cyan)" strokeWidth={1.5} />
           </div>
-          <h1 style={{ fontFamily: 'var(--mono)', fontSize: 20, color: '#fff', marginBottom: 6 }}>
+          <h1 style={{ fontFamily: 'var(--mono)', fontSize: 20, color: 'var(--text)', marginBottom: 6 }}>
             Admin Portal
           </h1>
           <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--muted)', letterSpacing: 2 }}>
-            RAJKUMAR SEC // RESTRICTED ACCESS
+            RAJKUMAR SECcloud • RESTRICTED ACCESS
           </p>
         </div>
 
@@ -83,8 +83,8 @@ export default function AdminLogin() {
               placeholder="Enter admin password"
               required
               style={{
-                width: '100%', background: 'rgba(255,255,255,0.04)',
-                border: `1px solid ${error ? '#ff6b6b' : 'var(--border)'}`,
+                width: '100%', background: 'var(--bg3)',
+                border: `1px solid ${error ? '#dc2626' : 'var(--border)'}`,
                 borderRadius: 8, color: 'var(--text)',
                 fontFamily: 'var(--mono)', fontSize: 14,
                 padding: '12px 44px', outline: 'none',
@@ -111,9 +111,9 @@ export default function AdminLogin() {
           {error && (
             <div style={{
               display: 'flex', alignItems: 'center', gap: 8,
-              background: 'rgba(255,107,107,0.08)', border: '1px solid rgba(255,107,107,0.2)',
+              background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.2)',
               borderRadius: 8, padding: '10px 14px', marginBottom: 20,
-              fontSize: 13, color: '#ff6b6b',
+              fontSize: 13, color: '#dc2626',
             }}>
               <AlertCircle size={14} />
               {error}

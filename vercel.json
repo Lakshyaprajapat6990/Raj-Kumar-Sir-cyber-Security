@@ -8,11 +8,14 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["server/**"] }
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/index.js" },
-    { "src": "/(.*)", "dest": "/client/$1" }
+    { "src": "/static/(.*)", "dest": "/client/static/$1" },
+    { "src": "/(.*\\.(js|css|ico|png|jpg|svg|json|txt))", "dest": "/client/$1" },
+    { "src": "/(.*)", "dest": "/client/index.html" }
   ]
 }

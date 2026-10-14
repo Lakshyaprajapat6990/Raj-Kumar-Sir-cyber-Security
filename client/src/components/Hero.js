@@ -11,16 +11,35 @@ const stats = [
 ];
 
 const titles = [
-  'Cybersecurity Analyst',
-  'Ethical Hacker',
-  'Network Defense Specialist',
-  'Cryptography Expert',
+  'Cybersecurity Consulting & Risk Management',
+  'Cryptography Expert (PKI & Key Management)',
+  'CEH - Ethical Hacking & Penetration Testing',
+  'Cloud Data Security (AWS, Azure, GCP)',
+  'SSL/TLS Certificate Management',
+  'Linux Server Hardening & Security',
+  'Network Security & Defense (CCNA)',
+  'Dark Web Monitoring & Threat Intelligence',
+  'IT Maintenance Core Framework',
+  'IT Infrastructure Delivery Matrix',
+  'IT Implementation Best Practices',
+  'IT Asset Management (ITAM) Lifecycle',
+  'IT SLAs & OLAs Framework',
+  'IT Documentation & Knowledge Management',
 ];
+
+const heroImages = [
+  '/hero/hero-bg-1.jpg',
+  '/hero/hero-bg-2.jpg',
+  '/hero/hero-bg-3.jpg',
+];
+
+const SLIDE_MS = 9000;
 
 export default function Hero() {
   const [titleIdx, setTitleIdx] = useState(0);
   const [displayed, setDisplayed] = useState('');
   const [deleting, setDeleting] = useState(false);
+  const [bgIdx, setBgIdx] = useState(0);
 
   useEffect(() => {
     const current = titles[titleIdx];
@@ -38,20 +57,63 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [displayed, deleting, titleIdx]);
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      setBgIdx((i) => (i + 1) % heroImages.length);
+    }, SLIDE_MS);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section id="hero" style={{
+      position: 'relative',
       minHeight: '100vh',
-      display: 'flex', alignItems: 'center',
-      paddingTop: 80,
-      background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,255,0.06) 0%, transparent 70%)',
+      display: 'flex',
+      alignItems: 'center',
+      paddingTop: 130,
+      overflow: 'hidden',
     }}>
-      <div className="container" style={{ width: '100%' }}>
+      {/* Rotating full-bleed backgrounds */}
+      {heroImages.map((src, i) => (
+        <div
+          key={src}
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `url(${src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            opacity: i === bgIdx ? 1 : 0,
+            transform: i === bgIdx ? 'scale(1.04)' : 'scale(1)',
+            transition: 'opacity 1.2s ease, transform 9s linear',
+            zIndex: 0,
+          }}
+        />
+      ))}
+
+      {/* Brand wash for readable text */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 1,
+          background: `
+            linear-gradient(105deg, rgba(244,245,241,0.94) 0%, rgba(244,245,241,0.82) 42%, rgba(244,245,241,0.45) 68%, rgba(244,245,241,0.22) 100%),
+            linear-gradient(180deg, rgba(244,245,241,0.35) 0%, transparent 35%, rgba(238,240,234,0.55) 100%)
+          `,
+        }}
+      />
+
+      <div className="container" style={{ width: '100%', position: 'relative', zIndex: 2 }}>
         <div style={{ maxWidth: 780 }}>
-          {/* Status badge */}
           <Animate type="fadeDown" delay="0s">
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: 'rgba(0,255,136,0.08)', border: '1px solid rgba(0,255,136,0.25)',
+              background: 'rgba(255,255,255,0.72)', border: '1px solid rgba(107,143,0,0.28)',
+              backdropFilter: 'blur(8px)',
               borderRadius: 20, padding: '6px 16px', marginBottom: 28,
             }}>
               <span style={{
@@ -65,20 +127,18 @@ export default function Hero() {
             </div>
           </Animate>
 
-          {/* Headline */}
           <Animate type="fadeLeft" delay="0.15s">
             <h1 style={{
-              fontFamily: 'var(--mono)', fontSize: 'clamp(36px, 6vw, 68px)',
-              fontWeight: 400, lineHeight: 1.1, color: '#fff', marginBottom: 20,
+              fontFamily: 'var(--display)', fontSize: 'clamp(36px, 6vw, 68px)',
+              fontWeight: 700, lineHeight: 1.1, color: 'var(--text)', marginBottom: 20,
             }}>
               Securing Your<br />
-              <span style={{ color: 'var(--cyan)', textShadow: '0 0 30px rgba(0,212,255,0.4)' }}>
+              <span style={{ color: 'var(--accent)', textShadow: '0 8px 24px rgba(182,217,42,0.25)' }}>
                 Digital World
               </span>
             </h1>
           </Animate>
 
-          {/* Typewriter */}
           <Animate type="fadeLeft" delay="0.25s">
             <div style={{
               fontFamily: 'var(--mono)', fontSize: 'clamp(20px, 2.5vw, 26px)',
@@ -94,7 +154,6 @@ export default function Hero() {
             </div>
           </Animate>
 
-          {/* Tagline */}
           <Animate type="fadeUp" delay="0.35s">
             <p style={{
               fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)',
@@ -112,23 +171,47 @@ export default function Hero() {
             </p>
           </Animate>
 
-          {/* CTA buttons */}
           <Animate type="fadeUp" delay="0.55s">
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 64 }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 48 }}>
               <Link to="services" spy smooth offset={-68} duration={600}>
                 <button className="btn-primary" style={{ fontSize: 15, padding: '14px 32px' }}>
                   <Zap size={16} /> Explore Services
                 </button>
               </Link>
               <Link to="contact" spy smooth offset={-68} duration={600}>
-                <button className="btn-outline" style={{ fontSize: 15, padding: '14px 32px' }}>
+                <button className="btn-outline" style={{
+                  fontSize: 15, padding: '14px 32px',
+                  background: 'rgba(255,255,255,0.55)',
+                  backdropFilter: 'blur(6px)',
+                }}>
                   <Mail size={16} /> Contact Me
                 </button>
               </Link>
             </div>
           </Animate>
 
-          {/* Stats */}
+          {/* Slide indicators */}
+          <div style={{ display: 'flex', gap: 8, marginBottom: 40 }} aria-label="Hero slideshow">
+            {heroImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Show background ${i + 1}`}
+                onClick={() => setBgIdx(i)}
+                style={{
+                  width: i === bgIdx ? 28 : 10,
+                  height: 10,
+                  borderRadius: 999,
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  background: i === bgIdx ? 'var(--primary)' : 'rgba(10,12,8,0.22)',
+                  transition: 'width 0.35s ease, background 0.35s ease',
+                }}
+              />
+            ))}
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}
             className="stats-grid">
             {stats.map((s, i) => (
@@ -141,7 +224,7 @@ export default function Hero() {
                   <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 6 }}>{s.icon}</div>
                   <div style={{
                     fontFamily: 'var(--mono)', fontSize: 32, color: 'var(--cyan)',
-                    textShadow: '0 0 20px rgba(0,212,255,0.4)',
+                    textShadow: 'none',
                   }}>
                     {s.value}
                   </div>

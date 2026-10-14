@@ -16,7 +16,7 @@ const card = {
   borderRadius: 12, padding: 24,
 };
 
-const statusColors = { new: '#00d4ff', read: '#f39c12', replied: '#00ff88' };
+const statusColors = { new: '#d4f84a', read: '#a16207', replied: '#6b8f00' };
 const statusIcons = {
   new: <Mail size={12} />,
   read: <Eye size={12} />,
@@ -60,9 +60,9 @@ function ContactsTab() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16, marginBottom: 28 }}>
         {[
           { label: 'Total', key: 'all', color: 'var(--cyan)' },
-          { label: 'New', key: 'new', color: '#00d4ff' },
-          { label: 'Read', key: 'read', color: '#f39c12' },
-          { label: 'Replied', key: 'replied', color: '#00ff88' },
+          { label: 'New', key: 'new', color: '#d4f84a' },
+          { label: 'Read', key: 'read', color: '#a16207' },
+          { label: 'Replied', key: 'replied', color: '#6b8f00' },
         ].map(({ label, key, color }) => (
           <div key={key} style={{ ...card, textAlign: 'center', cursor: 'pointer',
             border: filter === key ? `1px solid ${color}` : '1px solid var(--border)',
@@ -121,8 +121,8 @@ function ContactsTab() {
                 alignItems: 'center', gap: 16, padding: '16px 20px', cursor: 'pointer',
               }} onClick={() => setExpanded(expanded === c._id ? null : c._id)}>
                 <div>
-                  <div style={{ fontSize: 14, color: '#fff', fontWeight: 500 }}>{c.name}</div>
-                  <div style={{ fontSize: 12, color: 'var(--muted)' }}>{c.company || '—'}</div>
+                  <div style={{ fontSize: 14, color: 'var(--text)', fontWeight: 500 }}>{c.name}</div>
+                  <div style={{ fontSize: 12, color: 'var(--muted)' }}>{c.company || '-'}</div>
                 </div>
                 <div style={{ fontSize: 13, color: 'var(--muted)' }}>{c.email}</div>
                 <div style={{ fontSize: 12, color: 'var(--muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
@@ -150,7 +150,7 @@ function ContactsTab() {
               {expanded === c._id && (
                 <div style={{
                   borderTop: '1px solid var(--border)', padding: '20px',
-                  background: 'rgba(0,0,0,0.2)',
+                  background: 'rgba(10,12,8,0.06)',
                 }}>
                   <div style={{ marginBottom: 16 }}>
                     <div style={{ fontSize: 11, color: 'var(--muted)', fontFamily: 'var(--mono)', marginBottom: 6 }}>MESSAGE</div>
@@ -177,8 +177,8 @@ function ContactsTab() {
                       </button>
                     ))}
                     <button onClick={() => handleDelete(c._id)} style={{
-                      marginLeft: 'auto', background: 'rgba(255,107,107,0.08)',
-                      border: '1px solid rgba(255,107,107,0.3)', color: '#ff6b6b',
+                      marginLeft: 'auto', background: 'rgba(220,38,38,0.08)',
+                      border: '1px solid rgba(220,38,38,0.3)', color: '#dc2626',
                       fontFamily: 'var(--mono)', fontSize: 11, padding: '6px 14px',
                       borderRadius: 6, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6,
                     }}>
@@ -235,7 +235,7 @@ function TestimonialsTab() {
   };
 
   const inputStyle = {
-    width: '100%', background: 'rgba(255,255,255,0.04)',
+    width: '100%', background: 'var(--bg3)',
     border: '1px solid var(--border)', borderRadius: 8,
     color: 'var(--text)', fontFamily: 'var(--sans)', fontSize: 14,
     padding: '10px 14px', outline: 'none',
@@ -250,7 +250,7 @@ function TestimonialsTab() {
             {testimonials.length} total &nbsp;·&nbsp;
             <span style={{ color: 'var(--green)' }}>{testimonials.filter(t => t.visible).length} visible</span>
             &nbsp;·&nbsp;
-            <span style={{ color: '#f39c12' }}>{testimonials.filter(t => !t.visible).length} hidden</span>
+            <span style={{ color: '#a16207' }}>{testimonials.filter(t => !t.visible).length} hidden</span>
           </div>
         </div>
         <button onClick={() => setShowForm(!showForm)} className="btn-primary" style={{ padding: '9px 20px', fontSize: 13 }}>
@@ -260,7 +260,7 @@ function TestimonialsTab() {
 
       {/* Add form */}
       {showForm && (
-        <div style={{ ...card, marginBottom: 24, borderColor: 'rgba(0,212,255,0.3)' }}>
+        <div style={{ ...card, marginBottom: 24, borderColor: 'rgba(212,248,74,0.3)' }}>
           <h3 style={{ fontFamily: 'var(--mono)', color: 'var(--cyan)', fontSize: 14, marginBottom: 20 }}>
             NEW TESTIMONIAL
           </h3>
@@ -291,9 +291,9 @@ function TestimonialsTab() {
                 {[1, 2, 3, 4, 5].map(n => (
                   <button key={n} type="button" onClick={() => setForm({ ...form, rating: n })} style={{
                     background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-                    color: n <= form.rating ? '#f39c12' : 'var(--muted)',
+                    color: n <= form.rating ? '#a16207' : 'var(--muted)',
                   }}>
-                    <Star size={22} fill={n <= form.rating ? '#f39c12' : 'none'} />
+                    <Star size={22} fill={n <= form.rating ? '#a16207' : 'none'} />
                   </button>
                 ))}
               </div>
@@ -323,7 +323,7 @@ function TestimonialsTab() {
           {testimonials.map(t => (
             <div key={t._id} style={{
               ...card,
-              borderColor: t.visible ? 'var(--border)' : 'rgba(255,255,255,0.04)',
+              borderColor: t.visible ? 'var(--border)' : 'rgba(10,12,8,0.06)',
               opacity: t.visible ? 1 : 0.55,
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 16 }}>
@@ -332,14 +332,14 @@ function TestimonialsTab() {
                     {/* Avatar initials */}
                     <div style={{
                       width: 40, height: 40, borderRadius: '50%',
-                      background: 'rgba(0,212,255,0.1)', border: '1px solid rgba(0,212,255,0.2)',
+                      background: 'rgba(212,248,74,0.1)', border: '1px solid rgba(212,248,74,0.2)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--cyan)', flexShrink: 0,
                     }}>
                       {t.name.charAt(0).toUpperCase()}
                     </div>
                     <div>
-                      <div style={{ fontSize: 14, color: '#fff', fontWeight: 500 }}>{t.name}</div>
+                      <div style={{ fontSize: 14, color: 'var(--text)', fontWeight: 500 }}>{t.name}</div>
                       <div style={{ fontSize: 12, color: 'var(--muted)' }}>
                         {t.role}{t.company ? ` · ${t.company}` : ''}
                       </div>
@@ -347,15 +347,15 @@ function TestimonialsTab() {
                     {/* Stars */}
                     <div style={{ display: 'flex', gap: 2, marginLeft: 8 }}>
                       {[1, 2, 3, 4, 5].map(n => (
-                        <Star key={n} size={13} color="#f39c12"
-                          fill={n <= t.rating ? '#f39c12' : 'none'} />
+                        <Star key={n} size={13} color="#a16207"
+                          fill={n <= t.rating ? '#a16207' : 'none'} />
                       ))}
                     </div>
                   </div>
                   <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>
                     "{t.message}"
                   </p>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.2)', marginTop: 8, fontFamily: 'var(--mono)' }}>
+                  <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 8, fontFamily: 'var(--mono)' }}>
                     Added {new Date(t.createdAt).toLocaleDateString()}
                   </div>
                 </div>
@@ -364,8 +364,8 @@ function TestimonialsTab() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, flexShrink: 0 }}>
                   <button onClick={() => handleToggle(t._id)} style={{
                     display: 'flex', alignItems: 'center', gap: 6,
-                    background: t.visible ? 'rgba(0,255,136,0.08)' : 'rgba(255,255,255,0.04)',
-                    border: `1px solid ${t.visible ? 'rgba(0,255,136,0.25)' : 'var(--border)'}`,
+                    background: t.visible ? 'rgba(107,143,0,0.08)' : 'var(--bg3)',
+                    border: `1px solid ${t.visible ? 'rgba(107,143,0,0.25)' : 'var(--border)'}`,
                     color: t.visible ? 'var(--green)' : 'var(--muted)',
                     fontFamily: 'var(--mono)', fontSize: 11, padding: '6px 12px',
                     borderRadius: 6, cursor: 'pointer', whiteSpace: 'nowrap',
@@ -375,8 +375,8 @@ function TestimonialsTab() {
                   </button>
                   <button onClick={() => handleDelete(t._id)} style={{
                     display: 'flex', alignItems: 'center', gap: 6,
-                    background: 'rgba(255,107,107,0.06)', border: '1px solid rgba(255,107,107,0.2)',
-                    color: '#ff6b6b', fontFamily: 'var(--mono)', fontSize: 11,
+                    background: 'rgba(220,38,38,0.06)', border: '1px solid rgba(220,38,38,0.2)',
+                    color: '#dc2626', fontFamily: 'var(--mono)', fontSize: 11,
                     padding: '6px 12px', borderRadius: 6, cursor: 'pointer',
                   }}>
                     <Trash2 size={13} /> Delete
@@ -410,7 +410,7 @@ export default function AdminDashboard() {
     <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', flexDirection: 'column' }}>
       {/* Top bar */}
       <div style={{
-        background: 'rgba(5,5,8,0.98)', borderBottom: '1px solid var(--border)',
+        background: 'rgba(244,245,241,0.98)', borderBottom: '1px solid var(--border)',
         padding: '0 24px', position: 'sticky', top: 0, zIndex: 100,
       }}>
         <div style={{
@@ -419,8 +419,8 @@ export default function AdminDashboard() {
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <Shield size={20} color="var(--cyan)" />
-            <span style={{ fontFamily: 'var(--mono)', color: '#fff', fontSize: 16 }}>
-              RAJKUMAR <span style={{ color: 'var(--cyan)' }}>// Admin</span>
+            <span style={{ fontFamily: 'var(--mono)', color: 'var(--text)', fontSize: 16 }}>
+              RAJKUMAR SECcloud <span style={{ color: 'var(--cyan)' }}>• Admin</span>
             </span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
@@ -451,8 +451,8 @@ export default function AdminDashboard() {
           {tabs.map(({ key, label, Icon }) => (
             <button key={key} onClick={() => setTab(key)} style={{
               display: 'flex', alignItems: 'center', gap: 8,
-              background: tab === key ? 'rgba(0,212,255,0.12)' : 'transparent',
-              border: tab === key ? '1px solid rgba(0,212,255,0.25)' : '1px solid transparent',
+              background: tab === key ? 'rgba(212,248,74,0.12)' : 'transparent',
+              border: tab === key ? '1px solid rgba(212,248,74,0.25)' : '1px solid transparent',
               color: tab === key ? 'var(--cyan)' : 'var(--muted)',
               fontFamily: 'var(--mono)', fontSize: 13, padding: '8px 20px',
               borderRadius: 7, cursor: 'pointer', transition: 'all 0.2s',

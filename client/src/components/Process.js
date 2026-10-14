@@ -8,35 +8,35 @@ const steps = [
     Icon: Telescope,
     title: 'Discovery',
     desc: 'Initial consultation to understand your infrastructure, business context, threat landscape, and security objectives. We map your attack surface.',
-    color: '#00d4ff',
+    color: '#d4f84a',
   },
   {
     num: '02',
     Icon: FlaskConical,
     title: 'Assessment',
     desc: 'Deep-dive vulnerability scanning, penetration testing, code review, and configuration audits across all identified assets.',
-    color: '#00ff88',
+    color: '#6b8f00',
   },
   {
     num: '03',
     Icon: BarChart3,
     title: 'Reporting',
     desc: 'Detailed findings report with risk scores (Critical/High/Medium/Low), proof-of-concept evidence, business impact analysis, and executive summary.',
-    color: '#f39c12',
+    color: '#a16207',
   },
   {
     num: '04',
     Icon: Wrench,
     title: 'Hardening',
-    desc: 'Hands-on remediation — patching vulnerabilities, hardening configurations, implementing security controls, and validating fixes.',
-    color: '#ff6b6b',
+    desc: 'Hands-on remediation - patching vulnerabilities, hardening configurations, implementing security controls, and validating fixes.',
+    color: '#dc2626',
   },
   {
     num: '05',
     Icon: Radio,
     title: 'Monitoring',
     desc: 'Ongoing surveillance with dark web monitoring, threat intelligence feeds, alerting, and periodic reassessments to maintain security posture.',
-    color: '#9b59b6',
+    color: '#6b8f00',
   },
 ];
 
@@ -46,7 +46,7 @@ export default function Process() {
       <div className="container">
         <Animate type="fadeDown">
           <div className="section-header">
-            <span className="section-label">// engagement_model</span>
+            <span className="section-label">Engagement Model</span>
             <h2 className="section-title">How It <span>Works</span></h2>
             <p className="section-subtitle">
               A structured, transparent process from initial contact to ongoing protection
@@ -58,7 +58,7 @@ export default function Process() {
           {/* Connector line */}
           <div style={{
             position: 'absolute', top: 56, left: '10%', right: '10%', height: 2,
-            background: 'linear-gradient(90deg, var(--cyan), var(--green), #f39c12, #ff6b6b, #9b59b6)',
+            background: 'linear-gradient(90deg, var(--cyan), var(--green), #a16207, #dc2626, #6b8f00)',
             opacity: 0.3, zIndex: 0,
           }} className="connector-line" />
 
@@ -89,7 +89,7 @@ export default function Process() {
                     STEP {step.num}
                   </div>
 
-                  <h3 style={{ fontFamily: 'var(--mono)', fontSize: 19, color: '#fff', marginBottom: 12 }}>
+                  <h3 style={{ fontFamily: 'var(--mono)', fontSize: 19, color: 'var(--text)', marginBottom: 12 }}>
                     {step.title}
                   </h3>
 

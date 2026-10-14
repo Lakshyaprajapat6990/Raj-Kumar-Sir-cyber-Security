@@ -42,7 +42,7 @@ export default function Testimonials() {
     <section id="testimonials" style={{ padding: '100px 0', background: 'var(--bg)' }}>
       <div className="container">
         <div className="section-header">
-          <span className="section-label">// client_feedback</span>
+          <span className="section-label">Client Feedback</span>
           <h2 className="section-title">What Clients <span>Say</span></h2>
           <p className="section-subtitle">
             Real feedback from organizations that have trusted us with their security
@@ -54,7 +54,7 @@ export default function Testimonials() {
           <div style={{
             position: 'absolute', top: -20, left: 32,
             width: 52, height: 52, borderRadius: '50%',
-            background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)',
+            background: 'rgba(212,248,74,0.08)', border: '1px solid rgba(212,248,74,0.2)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             zIndex: 2,
           }}>
@@ -64,14 +64,14 @@ export default function Testimonials() {
           {/* Card */}
           <div className="glow-card" style={{
             paddingTop: 48, textAlign: 'center',
-            background: 'linear-gradient(135deg, rgba(0,212,255,0.03), rgba(0,255,136,0.02))',
+            background: 'linear-gradient(135deg, rgba(212,248,74,0.03), rgba(107,143,0,0.02))',
             minHeight: 280, display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
           }}>
             {/* Stars */}
             <div style={{ display: 'flex', justifyContent: 'center', gap: 4, marginBottom: 24 }}>
               {[1, 2, 3, 4, 5].map(n => (
-                <Star key={n} size={18} color="#f39c12"
-                  fill={n <= (t.rating || 5) ? '#f39c12' : 'none'} />
+                <Star key={n} size={18} color="#a16207"
+                  fill={n <= (t.rating || 5) ? '#a16207' : 'none'} />
               ))}
             </div>
 
@@ -88,14 +88,14 @@ export default function Testimonials() {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14 }}>
               <div style={{
                 width: 48, height: 48, borderRadius: '50%',
-                background: 'rgba(0,212,255,0.1)', border: '1px solid rgba(0,212,255,0.25)',
+                background: 'rgba(212,248,74,0.1)', border: '1px solid rgba(212,248,74,0.25)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'var(--mono)', fontSize: 18, color: 'var(--cyan)',
               }}>
                 {t.name.charAt(0).toUpperCase()}
               </div>
               <div style={{ textAlign: 'left' }}>
-                <div style={{ fontFamily: 'var(--mono)', fontSize: 14, color: '#fff' }}>{t.name}</div>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--text)' }}>{t.name}</div>
                 <div style={{ fontSize: 12, color: 'var(--muted)' }}>
                   {t.role}{t.company ? ` · ${t.company}` : ''}
                 </div>
@@ -124,9 +124,9 @@ export default function Testimonials() {
                 {testimonials.map((_, i) => (
                   <div key={i} onClick={() => { clearInterval(intervalRef.current); setCurrent(i); }} style={{
                     width: i === current ? 20 : 8, height: 8, borderRadius: 4,
-                    background: i === current ? 'var(--cyan)' : 'rgba(255,255,255,0.1)',
+                    background: i === current ? 'var(--cyan)' : 'rgba(10,12,8,0.12)',
                     cursor: 'pointer', transition: 'all 0.3s',
-                    boxShadow: i === current ? '0 0 8px rgba(0,212,255,0.5)' : 'none',
+                    boxShadow: i === current ? '0 0 8px rgba(212,248,74,0.5)' : 'none',
                   }} />
                 ))}
               </div>

@@ -35,12 +35,12 @@ router.post('/', async (req, res) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Thank you for contacting Rajkumar — CyberSec Expert',
+      subject: 'Thank you for contacting Rajkumar - CyberSec Expert',
       html: `<div style="background:#0a0a0f;color:#e0e0e0;padding:24px;font-family:monospace">
-        <h2 style="color:#00d4ff">// Message Received</h2>
+        <h2 style="color:#00d4ff">Message Received</h2>
         <p>Hi ${name},</p>
         <p>Thank you for reaching out. I have received your inquiry regarding <strong style="color:#00ff88">${service}</strong> and will respond within 24 hours.</p>
-        <p style="color:#00ff88">— Rajkumar | Cybersecurity Expert</p>
+        <p style="color:#00ff88">- Rajkumar | Cybersecurity Expert</p>
         <p style="color:#666;font-size:12px">Committed to Enhancing System Security and User Safety</p>
       </div>`
     });

@@ -10,13 +10,19 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 
 const serviceOptions = [
   'Cybersecurity Consulting & Risk Management',
-  'Cryptography Expert (Encryption, PKI, Key Management)',
-  'CEH — Certified Ethical Hacker / Penetration Testing',
+  'Cryptography Expert (PKI & Key Management)',
+  'CEH - Ethical Hacking & Penetration Testing',
   'Cloud Data Security (AWS, Azure, GCP)',
   'SSL/TLS Certificate Management',
-  'Linux Server Hardening',
-  'CCNA Networking & Network Security',
+  'Linux Server Hardening & Security',
+  'Network Security & Defense (CCNA)',
   'Dark Web Monitoring & Threat Intelligence',
+  'IT Maintenance Core Framework',
+  'IT Infrastructure Delivery Matrix',
+  'IT Implementation Best Practices',
+  'IT Asset Management (ITAM) Lifecycle',
+  'IT SLAs & OLAs Framework',
+  'IT Documentation & Knowledge Management',
   'Other / General Inquiry',
 ];
 
@@ -25,18 +31,18 @@ const consultIncludes = [
   'Initial threat landscape review',
   'Top 3 security gaps identified',
   'Recommended engagement roadmap',
-  'No sales pressure — pure value',
+  'No sales pressure - pure value',
 ];
 
 const contactInfo = [
-  { Icon: Mail, label: 'Email', value: 'ceoraj@cybersecuritycloud.online', href: 'mailto:ceoraj@cybersecuritycloud.online' },
+  { Icon: Mail, label: 'Email', value: 'inforaj@cybersecuritycloudai.com', href: 'mailto:inforaj@cybersecuritycloudai.com' },
   { Icon: Phone, label: 'Phone', value: '+91 94240 54049', href: 'tel:+919424054049' },
   { Icon: MapPin, label: 'Location', value: 'India (Remote Worldwide)', href: null },
   { Icon: Clock, label: 'Response Time', value: 'Within 24 Hours', href: null },
 ];
 
 const inputStyle = {
-  width: '100%', background: 'rgba(255,255,255,0.04)',
+  width: '100%', background: 'var(--bg3)',
   border: '1px solid var(--border)', borderRadius: 8,
   color: 'var(--text)', fontFamily: 'var(--sans)', fontSize: 14,
   padding: '12px 16px', outline: 'none',
@@ -74,7 +80,7 @@ export default function Contact() {
       <div className="container">
         <Animate type="fadeDown">
           <div className="section-header">
-            <span className="section-label">// get_in_touch</span>
+            <span className="section-label">Get In Touch</span>
             <h2 className="section-title">Contact <span>Me</span></h2>
             <p className="section-subtitle">
               Start your free consultation or discuss your security needs
@@ -125,7 +131,7 @@ export default function Contact() {
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 16, marginBottom: 24 }}>
                   <div style={{
                     width: 44, height: 44, borderRadius: 8,
-                    background: 'rgba(0,212,255,0.08)', border: '1px solid var(--border)',
+                    background: 'rgba(212,248,74,0.08)', border: '1px solid var(--border)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                   }}>
                     <Icon size={18} color="var(--cyan)" strokeWidth={1.5} />
@@ -150,7 +156,7 @@ export default function Contact() {
 
             {/* Free consultation checklist */}
             <div style={{
-              background: 'rgba(0,255,136,0.04)', border: '1px solid rgba(0,255,136,0.15)',
+              background: 'rgba(107,143,0,0.04)', border: '1px solid rgba(107,143,0,0.15)',
               borderRadius: 12, padding: 24,
             }}>
               <h4 style={{
@@ -230,7 +236,7 @@ export default function Contact() {
                   onBlur={e => e.target.style.borderColor = 'var(--border)'}>
                   <option value="">Select a service...</option>
                   {serviceOptions.map((opt, i) => (
-                    <option key={i} value={opt} style={{ background: '#0d0d18' }}>{opt}</option>
+                    <option key={i} value={opt} style={{ background: '#ffffff' }}>{opt}</option>
                   ))}
                 </select>
               </div>

@@ -1,4 +1,4 @@
-# Rajkumar — Cybersecurity Expert Website (MERN Stack)
+# Rajkumar - Cybersecurity Expert Website (MERN Stack)
 
 ## Project Structure
 

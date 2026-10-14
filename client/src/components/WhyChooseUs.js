@@ -6,30 +6,30 @@ const reasons = [
   {
     Icon: BadgeCheck,
     title: 'Certified Expertise',
-    desc: "Holding industry's most respected certifications — CEH, CCNA, and more — backed by hands-on real-world experience across enterprise environments.",
+    desc: "Holding industry's most respected certifications - CEH, CCNA, and more - backed by hands-on real-world experience across enterprise environments.",
     stats: '8+ Certifications',
-    color: '#00d4ff',
+    color: '#d4f84a',
   },
   {
     Icon: ShieldOff,
     title: 'Absolute Confidentiality',
     desc: "Every engagement operates under strict NDA. Your vulnerabilities, data, and findings never leave our secure environment. Client privacy is non-negotiable.",
     stats: '100% NDA Protected',
-    color: '#00ff88',
+    color: '#6b8f00',
   },
   {
     Icon: BellRing,
     title: '24/7 Incident Response',
     desc: "Cyber threats don't wait for business hours. Our incident response team is available around the clock to contain, investigate, and remediate breaches.",
     stats: 'Always Available',
-    color: '#ff6b6b',
+    color: '#dc2626',
   },
   {
     Icon: RefreshCw,
     title: 'End-to-End Coverage',
-    desc: 'From initial risk assessment to ongoing monitoring — complete lifecycle security management so you never have a gap in your defense posture.',
+    desc: 'From initial risk assessment to ongoing monitoring - complete lifecycle security management so you never have a gap in your defense posture.',
     stats: 'Full Lifecycle',
-    color: '#9b59b6',
+    color: '#6b8f00',
   },
 ];
 
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
       <div className="container">
         <Animate type="fadeDown">
           <div className="section-header">
-            <span className="section-label">// differentiators</span>
+            <span className="section-label">Why Choose Us</span>
             <h2 className="section-title">Why <span>Choose Us</span></h2>
             <p className="section-subtitle">
               What sets our cybersecurity practice apart from generic IT security vendors
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                   <Icon size={26} color={r.color} strokeWidth={1.5} />
                 </div>
 
-                <h3 style={{ fontFamily: 'var(--mono)', fontSize: 19, color: '#fff', marginBottom: 12 }}>
+                <h3 style={{ fontFamily: 'var(--mono)', fontSize: 19, color: 'var(--text)', marginBottom: 12 }}>
                   {r.title}
                 </h3>
 
@@ -100,14 +100,14 @@ export default function WhyChooseUs() {
         <Animate type="fadeUp" delay="0.2s">
         <div style={{
           marginTop: 64,
-          background: 'linear-gradient(135deg, rgba(0,212,255,0.06), rgba(0,255,136,0.03))',
-          border: '1px solid rgba(0,212,255,0.15)',
+          background: 'linear-gradient(135deg, rgba(212,248,74,0.06), rgba(107,143,0,0.03))',
+          border: '1px solid rgba(212,248,74,0.15)',
           borderRadius: 16, padding: '40px 48px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: 24,
         }}>
           <div>
-            <h3 style={{ fontFamily: 'var(--mono)', fontSize: 24, color: '#fff', marginBottom: 8 }}>
+            <h3 style={{ fontFamily: 'var(--mono)', fontSize: 24, color: 'var(--text)', marginBottom: 8 }}>
               Ready to Secure Your Organization?
             </h3>
             <p style={{ color: 'var(--muted)', fontSize: 17 }}>

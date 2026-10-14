@@ -72,14 +72,14 @@ function SkillBar({ name, level, animate }) {
         <span style={{ fontSize: 16, color: 'var(--text)' }}>{name}</span>
         <span style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)' }}>{level}%</span>
       </div>
-      <div style={{ height: 4, background: 'rgba(255,255,255,0.06)', borderRadius: 2, overflow: 'hidden' }}>
+      <div style={{ height: 4, background: 'rgba(10,12,8,0.08)', borderRadius: 2, overflow: 'hidden' }}>
         <div style={{
           height: '100%',
           width: animate ? `${level}%` : '0%',
           background: 'linear-gradient(90deg, var(--cyan), var(--green))',
           borderRadius: 2,
           transition: 'width 1.2s cubic-bezier(0.4,0,0.2,1)',
-          boxShadow: '0 0 8px rgba(0,212,255,0.4)',
+          boxShadow: '0 0 8px rgba(212,248,74,0.4)',
         }} />
       </div>
     </div>
@@ -104,7 +104,7 @@ export default function Skills() {
       <div className="container">
         <Animate type="fadeDown">
           <div className="section-header">
-            <span className="section-label">// technical_expertise</span>
+            <span className="section-label">Technical Expertise</span>
             <h2 className="section-title">Skills <span>&amp; Expertise</span></h2>
             <p className="section-subtitle">
               Battle-tested technical proficiencies across the full cybersecurity spectrum
@@ -126,7 +126,7 @@ export default function Skills() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
                   <div style={{
                     width: 36, height: 36, borderRadius: 8,
-                    background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.15)',
+                    background: 'rgba(212,248,74,0.08)', border: '1px solid rgba(212,248,74,0.15)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                   }}>
                     <Icon size={18} color="var(--cyan)" strokeWidth={1.5} />

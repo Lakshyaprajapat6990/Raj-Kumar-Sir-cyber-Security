@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// Simple token-based login — no JWT dependency needed
+// Simple token-based login - no JWT dependency needed
 router.post('/login', (req, res) => {
   const { password } = req.body;
   if (!password || password !== process.env.ADMIN_PASSWORD) {

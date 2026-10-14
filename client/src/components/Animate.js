@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from 'react';
 /**
  * Wraps children with a scroll-triggered animation.
  * Props:
- *   type    — 'fadeUp' | 'fadeDown' | 'fadeLeft' | 'fadeRight' | 'zoomIn' | 'flipIn' | 'popIn'
- *   delay   — CSS delay string e.g. '0.1s'
- *   threshold — 0–1, how much of element must be visible (default 0.12)
- *   style   — extra styles on wrapper div
- *   className — extra class on wrapper div
+ *   type    - 'fadeUp' | 'fadeDown' | 'fadeLeft' | 'fadeRight' | 'zoomIn' | 'flipIn' | 'popIn'
+ *   delay   - CSS delay string e.g. '0.1s'
+ *   threshold - 0-1, how much of element must be visible (default 0.12)
+ *   style   - extra styles on wrapper div
+ *   className - extra class on wrapper div
  */
 export default function Animate({
   children,
