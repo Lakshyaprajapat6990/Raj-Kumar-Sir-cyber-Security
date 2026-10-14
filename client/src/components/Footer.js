@@ -192,7 +192,7 @@ export default function Footer() {
           flexWrap: 'wrap', gap: 12,
         }}>
           <span style={{ fontSize: 14, color: 'rgba(244,245,241,0.65)', fontFamily: 'var(--sans)' }}>
-            © 2020 ISO 27001 Rajkumar | Cybersecurity Expert. All rights reserved.
+            © 2020 ISO 27035 Rajkumar | Cybersecurity Expert. All rights reserved.
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <div style={{
