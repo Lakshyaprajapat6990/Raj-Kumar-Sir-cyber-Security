@@ -27,11 +27,11 @@ const serviceOptions = [
 ];
 
 const consultIncludes = [
-  '30-minute 1-on-1 with Rajkumar',
-  'Initial threat landscape review',
-  'Top 3 security gaps identified',
-  'Recommended engagement roadmap',
-  'No sales pressure - pure value',
+  '30-minute call with Rajkumar',
+  'Quick look at your current risk picture',
+  'Your top 3 security gaps, explained simply',
+  'A clear suggested next-step plan',
+  'No hard sell, just useful guidance',
 ];
 
 const contactInfo = [
@@ -83,7 +83,7 @@ export default function Contact() {
             <span className="section-label">Get In Touch</span>
             <h2 className="section-title">Contact <span>Me</span></h2>
             <p className="section-subtitle">
-              Start your free consultation or discuss your security needs
+              Book a free chat, or just tell me what you are worried about
             </p>
           </div>
         </Animate>

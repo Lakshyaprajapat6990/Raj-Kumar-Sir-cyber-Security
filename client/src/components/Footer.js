@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { Shield, Mail, Phone, MapPin, Zap, Link2, GitBranch, MessageSquare, Lock } from 'lucide-react';
 
-const quickLinks = ['Services', 'Skills', 'Certifications', 'Dark Web', 'Process', 'Why Us', 'Contact'];
-const linkTargets = ['services', 'skills', 'certifications', 'darkweb', 'process', 'why', 'contact'];
+const quickLinks = ['Services', 'rajcyber', 'Digital', 'NetSec', 'Dark Web', 'Why Us', 'Contact'];
+const linkTargets = ['services', 'rajcyber', 'digital', 'netsec', 'darkweb', 'why', 'contact'];
 
 const serviceList = [
-  'Cybersecurity Consulting',
-  'Cryptography & PKI',
+  'rajcyber DaaS',
+  'rajcyber CloudInfinit CKS',
+  'Hosted Private Cloud',
+  'Managed Public Cloud',
+  'CloudInfinit+AI',
+  'Network Security',
   'Penetration Testing (CEH)',
-  'Cloud Data Security',
-  'SSL/TLS Management',
-  'Linux Server Hardening',
-  'Network Security (CCNA)',
   'Dark Web Monitoring',
 ];
 
@@ -66,11 +66,11 @@ export default function Footer() {
               fontFamily: 'var(--sans)', fontSize: 12, color: '#d4f84a', fontWeight: 600,
               letterSpacing: 1, marginBottom: 16, textTransform: 'uppercase',
             }}>
-              Committed to Enhancing System Security and User Safety
+              Security that people can understand and trust
             </p>
             <p style={{ fontSize: 14, color: 'rgba(244,245,241,0.72)', lineHeight: 1.7, marginBottom: 24 }}>
-              Aspiring Cybersecurity Analyst | Ethical Hacker | Network Defense Specialist.
-              Protecting your digital assets with certified expertise.
+              Cybersecurity analyst, ethical hacker, and network defender.
+              I help protect what your business depends on, with care and clarity.
             </p>
 
             {/* Social links */}

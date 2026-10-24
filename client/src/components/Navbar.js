@@ -4,10 +4,11 @@ import { Menu, X, Shield, ArrowUpRight } from 'lucide-react';
 
 const links = [
   { to: 'services', label: 'Services' },
+  { to: 'rajcyber', label: 'rajcyber' },
+  { to: 'digital', label: 'Digital' },
+  { to: 'netsec', label: 'NetSec' },
   { to: 'skills', label: 'Skills' },
-  { to: 'certifications', label: 'Certifications' },
   { to: 'darkweb', label: 'Dark Web' },
-  { to: 'process', label: 'Process' },
   { to: 'why', label: 'Why Us' },
   { to: 'contact', label: 'Contact' },
 ];

@@ -9,56 +9,56 @@ const services = [
   {
     Icon: ShieldCheck,
     title: 'IT Cybersecurity Consulting & Risk Management',
-    desc: 'Comprehensive security assessments, risk analysis, and strategic consulting to identify vulnerabilities before attackers do. Building robust security frameworks tailored to your business needs and compliance requirements.',
+    desc: 'We sit with your team, look at how you work today, and spot the risks that matter. Then we build a simple, realistic security plan that fits your business and any compliance you need.',
     tags: ['ISO 27001', 'NIST', 'Risk Analysis', 'Compliance'],
     color: '#6b8f00',
   },
   {
     Icon: Lock,
     title: 'IT Cryptography Expert',
-    desc: 'Deep expertise in encryption algorithms, Public Key Infrastructure (PKI), and enterprise key management systems. Ensuring your data remains protected at rest and in transit with industry-grade cryptographic solutions.',
+    desc: 'Encryption should protect your data without slowing you down. I help set up PKI, key handling, and strong crypto so information stays safe whether it is stored or moving across the network.',
     tags: ['PKI', 'AES/RSA', 'Key Management', 'Encryption'],
     color: '#9cbc12',
   },
   {
     Icon: Sword,
     title: 'CEH - Certified Ethical Hacker / Penetration Testing',
-    desc: 'Authorized penetration testing using real-world attacker techniques to expose security gaps. From network exploitation to web application attacks - comprehensive offensive security assessments with detailed remediation reports.',
+    desc: 'I test your systems the way a real attacker would, with your permission. You get a clear report of what broke, why it matters, and exactly how to fix it.',
     tags: ['CEH', 'Pen Testing', 'OWASP', 'Metasploit'],
     color: '#dc2626',
   },
   {
     Icon: Cloud,
     title: 'IT Cloud Data Security',
-    desc: 'Specialized security architecture and auditing for AWS, Azure, and Google Cloud Platform environments. Implementing zero-trust policies, IAM hardening, and cloud-native security tools to protect your cloud infrastructure.',
+    desc: 'Running on AWS, Azure, or GCP? I review your setup, tighten access, and close common cloud gaps so your workloads stay secure as you grow.',
     tags: ['AWS', 'Azure', 'GCP', 'Zero Trust', 'IAM'],
     color: '#15803d',
   },
   {
     Icon: Award,
     title: 'IT SSL/TLS Certificate Management',
-    desc: 'End-to-end SSL/TLS lifecycle management including procurement, installation, renewal, and monitoring. Ensuring uninterrupted encryption and preventing certificate-related outages and man-in-the-middle vulnerabilities.',
+    desc: 'Expired certificates cause outages and trust issues. I handle setup, renewals, and monitoring so your sites stay encrypted and online without last-minute surprises.',
     tags: ['SSL/TLS', 'PKI', 'Certificate Monitoring', 'HTTPS'],
     color: '#b6d92a',
   },
   {
     Icon: Terminal,
     title: 'IT Linux Server Hardening',
-    desc: 'Systematic security hardening of Linux servers following CIS benchmarks and industry best practices. Reducing attack surface through kernel tuning, access controls, file integrity monitoring, and intrusion detection.',
+    desc: 'I lock down Linux servers using proven benchmarks: less open surface, stronger access control, and better visibility if something looks wrong.',
     tags: ['CIS Benchmark', 'SELinux', 'Firewall', 'IDS/IPS'],
     color: '#a16207',
   },
   {
     Icon: Network,
     title: 'IT Networking & Network Security (CCNA)',
-    desc: 'Advanced network architecture design with built-in security controls. Implementing VLANs, VPNs, firewall rules, and intrusion prevention systems to defend your network perimeter and internal traffic.',
+    desc: 'Good network design keeps traffic flowing and unwanted guests out. I help with VLANs, VPNs, firewalls, and monitoring so your perimeter and internal network stay under control.',
     tags: ['CCNA', 'VPN', 'Firewall', 'IPS', 'VLAN'],
     color: '#6b8f00',
   },
   {
     Icon: Eye,
     title: 'IT Dark Web Monitoring & Threat Intelligence',
-    desc: "Continuous surveillance of dark web forums, marketplaces, and leaked databases for your organization's sensitive data. Proactive threat intelligence to identify and neutralize threats before they materialize.",
+    desc: 'I watch dark web forums and leak sites for your company name, emails, and data. If something shows up, you hear about it early, while there is still time to act.',
     tags: ['OSINT', 'Threat Intel', 'Data Breach Detection', 'TOR'],
     color: '#3f5200',
   },
@@ -126,7 +126,7 @@ export default function Services() {
             <span className="section-label">What I Do</span>
             <h2 className="section-title">Core <span>Services</span></h2>
             <p className="section-subtitle">
-              Comprehensive cybersecurity solutions protecting organizations from modern digital threats
+              Practical security help for real businesses, from first assessment to ongoing protection
             </p>
           </div>
         </Animate>

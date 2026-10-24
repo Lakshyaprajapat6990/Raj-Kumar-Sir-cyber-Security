@@ -5,29 +5,29 @@ import Animate from './Animate';
 const reasons = [
   {
     Icon: BadgeCheck,
-    title: 'Certified Expertise',
-    desc: "Holding industry's most respected certifications - CEH, CCNA, and more - backed by hands-on real-world experience across enterprise environments.",
+    title: 'Real certifications, real work',
+    desc: 'CEH, CCNA, and more are not just logos on a page. They sit on top of years of hands-on work with live systems and real incidents.',
     stats: '8+ Certifications',
     color: '#d4f84a',
   },
   {
     Icon: ShieldOff,
-    title: 'Absolute Confidentiality',
-    desc: "Every engagement operates under strict NDA. Your vulnerabilities, data, and findings never leave our secure environment. Client privacy is non-negotiable.",
+    title: 'Your secrets stay yours',
+    desc: 'Every project starts with an NDA. Findings, passwords, and client details stay private. No sharing, no shortcuts.',
     stats: '100% NDA Protected',
     color: '#6b8f00',
   },
   {
     Icon: BellRing,
-    title: '24/7 Incident Response',
-    desc: "Cyber threats don't wait for business hours. Our incident response team is available around the clock to contain, investigate, and remediate breaches.",
+    title: 'Help when it matters',
+    desc: 'Attacks do not wait for Monday morning. When something looks wrong, you can reach out and get calm, practical support.',
     stats: 'Always Available',
     color: '#dc2626',
   },
   {
     Icon: RefreshCw,
-    title: 'End-to-End Coverage',
-    desc: 'From initial risk assessment to ongoing monitoring - complete lifecycle security management so you never have a gap in your defense posture.',
+    title: 'From start to follow-up',
+    desc: 'Assessment, fixes, and ongoing checks in one place. You are not left with a report and no idea what to do next.',
     stats: 'Full Lifecycle',
     color: '#6b8f00',
   },
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
             <span className="section-label">Why Choose Us</span>
             <h2 className="section-title">Why <span>Choose Us</span></h2>
             <p className="section-subtitle">
-              What sets our cybersecurity practice apart from generic IT security vendors
+              Straight talk, careful work, and support that continues after the first report
             </p>
           </div>
         </Animate>

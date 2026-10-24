@@ -45,7 +45,7 @@ export default function Testimonials() {
           <span className="section-label">Client Feedback</span>
           <h2 className="section-title">What Clients <span>Say</span></h2>
           <p className="section-subtitle">
-            Real feedback from organizations that have trusted us with their security
+            Words from people who trusted me with their security
           </p>
         </div>
 

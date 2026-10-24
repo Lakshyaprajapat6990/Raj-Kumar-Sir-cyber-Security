@@ -122,7 +122,7 @@ export default function Hero() {
                 animation: 'pulse 2s infinite',
               }} />
               <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--green)' }}>
-                Available for Security Engagements
+                Open for new security projects
               </span>
             </div>
           </Animate>
@@ -159,15 +159,15 @@ export default function Hero() {
               fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)',
               letterSpacing: 2, marginBottom: 20,
             }}>
-              {'{'}{'}'} Committed to Enhancing System Security and User Safety
+              Helping teams stay safe online, one system at a time
             </p>
           </Animate>
 
           <Animate type="fadeUp" delay="0.45s">
             <p style={{ fontSize: 18, color: 'var(--muted)', maxWidth: 620, marginBottom: 40, lineHeight: 1.8 }}>
-              Expert cybersecurity professional specializing in penetration testing, cryptography,
-              cloud security, and dark web threat intelligence. Protecting organizations from
-              advanced persistent threats with certified expertise and proven methodologies.
+              I help businesses find weak spots before attackers do. From pen testing and
+              encryption to cloud hardening and dark web checks, you get practical advice
+              and clear next steps, not jargon.
             </p>
           </Animate>
 

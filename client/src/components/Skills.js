@@ -107,7 +107,7 @@ export default function Skills() {
             <span className="section-label">Technical Expertise</span>
             <h2 className="section-title">Skills <span>&amp; Expertise</span></h2>
             <p className="section-subtitle">
-              Battle-tested technical proficiencies across the full cybersecurity spectrum
+              Skills shaped by real projects, not just textbooks
             </p>
           </div>
         </Animate>

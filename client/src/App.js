@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import RajCyberOfferings from './components/RajCyberOfferings';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import DarkWeb from './components/DarkWeb';
@@ -125,6 +126,7 @@ function PublicSite() {
       <main>
         <Hero />
         <Services />
+        <RajCyberOfferings />
         <Skills />
         <Certifications />
         <DarkWeb />

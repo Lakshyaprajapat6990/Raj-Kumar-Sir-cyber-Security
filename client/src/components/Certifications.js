@@ -62,7 +62,7 @@ export default function Certifications() {
             <span className="section-label">Credentials</span>
             <h2 className="section-title">Certifications <span>&amp; Credentials</span></h2>
             <p className="section-subtitle">
-              Industry-recognized certifications validating expertise across cybersecurity domains
+              Credentials that match the work I do every day
             </p>
           </div>
         </Animate>

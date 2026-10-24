@@ -7,36 +7,36 @@ const steps = [
     num: '01',
     Icon: Telescope,
     title: 'Discovery',
-    desc: 'Initial consultation to understand your infrastructure, business context, threat landscape, and security objectives. We map your attack surface.',
-    color: '#d4f84a',
+    desc: 'We talk through your setup, goals, and worries. I learn how your systems connect and where risk is most likely to show up.',
+    color: '#3f5200',
   },
   {
     num: '02',
     Icon: FlaskConical,
     title: 'Assessment',
-    desc: 'Deep-dive vulnerability scanning, penetration testing, code review, and configuration audits across all identified assets.',
+    desc: 'Then I dig in: scans, pen tests, config reviews, and wherever else makes sense for your environment.',
     color: '#6b8f00',
   },
   {
     num: '03',
     Icon: BarChart3,
     title: 'Reporting',
-    desc: 'Detailed findings report with risk scores (Critical/High/Medium/Low), proof-of-concept evidence, business impact analysis, and executive summary.',
+    desc: 'You get a plain-language report with priority levels, proof where needed, and a short summary leaders can actually use.',
     color: '#a16207',
   },
   {
     num: '04',
     Icon: Wrench,
     title: 'Hardening',
-    desc: 'Hands-on remediation - patching vulnerabilities, hardening configurations, implementing security controls, and validating fixes.',
-    color: '#dc2626',
+    desc: 'We fix what matters: patches, tighter configs, better controls, and a re-check to confirm the issue is closed.',
+    color: '#b91c1c',
   },
   {
     num: '05',
     Icon: Radio,
     title: 'Monitoring',
-    desc: 'Ongoing surveillance with dark web monitoring, threat intelligence feeds, alerting, and periodic reassessments to maintain security posture.',
-    color: '#6b8f00',
+    desc: 'If you want ongoing cover, I keep watching for new leaks and threats, and check in regularly so nothing quietly drifts.',
+    color: '#15803d',
   },
 ];
 
@@ -49,17 +49,16 @@ export default function Process() {
             <span className="section-label">Engagement Model</span>
             <h2 className="section-title">How It <span>Works</span></h2>
             <p className="section-subtitle">
-              A structured, transparent process from initial contact to ongoing protection
+              A simple path from first conversation to lasting protection
             </p>
           </div>
         </Animate>
 
         <div style={{ position: 'relative' }} className="process-container">
-          {/* Connector line */}
           <div style={{
             position: 'absolute', top: 56, left: '10%', right: '10%', height: 2,
-            background: 'linear-gradient(90deg, var(--cyan), var(--green), #a16207, #dc2626, #6b8f00)',
-            opacity: 0.3, zIndex: 0,
+            background: 'linear-gradient(90deg, #3f5200, #6b8f00, #a16207, #b91c1c, #15803d)',
+            opacity: 0.45, zIndex: 0,
           }} className="connector-line" />
 
           <div style={{
@@ -70,33 +69,37 @@ export default function Process() {
               const { Icon } = step;
               return (
                 <Animate key={i} type="fadeUp" delay={`${i * 0.15}s`}>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{
-                    width: 72, height: 72, borderRadius: '50%',
-                    border: `2px solid ${step.color}`,
-                    boxShadow: `0 0 20px ${step.color}30`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    background: `${step.color}10`,
-                  }}>
-                    <Icon size={28} color={step.color} strokeWidth={1.5} />
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{
+                      width: 72, height: 72, borderRadius: '50%',
+                      border: `2px solid ${step.color}`,
+                      boxShadow: `0 8px 22px ${step.color}28`,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      margin: '0 auto 20px',
+                      background: '#fff',
+                    }}>
+                      <Icon size={28} color={step.color} strokeWidth={1.8} />
+                    </div>
+
+                    <div style={{
+                      fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 700,
+                      color: step.color,
+                      letterSpacing: 2, marginBottom: 8,
+                    }}>
+                      STEP {step.num}
+                    </div>
+
+                    <h3 style={{
+                      fontFamily: 'var(--display)', fontSize: 19, fontWeight: 700,
+                      color: 'var(--text)', marginBottom: 12,
+                    }}>
+                      {step.title}
+                    </h3>
+
+                    <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
+                      {step.desc}
+                    </p>
                   </div>
-
-                  <div style={{
-                    fontFamily: 'var(--mono)', fontSize: 11, color: step.color,
-                    letterSpacing: 2, marginBottom: 8,
-                  }}>
-                    STEP {step.num}
-                  </div>
-
-                  <h3 style={{ fontFamily: 'var(--mono)', fontSize: 19, color: 'var(--text)', marginBottom: 12 }}>
-                    {step.title}
-                  </h3>
-
-                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.8 }}>
-                    {step.desc}
-                  </p>
-                </div>
                 </Animate>
               );
             })}

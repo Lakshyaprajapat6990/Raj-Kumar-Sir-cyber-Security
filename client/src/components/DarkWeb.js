@@ -16,14 +16,14 @@ const terminalLines = [
 ];
 
 const services = [
-  'Continuous .onion site & forum monitoring',
-  'Leaked credentials & data breach detection',
-  'Threat actor tracking & profiling',
-  'Paste site surveillance (Pastebin, Ghostbin)',
-  'Dark web marketplace monitoring',
-  'Stolen credit card & PII detection',
-  'Ransomware group intelligence feeds',
-  'Brand impersonation & phishing kit tracking',
+  'Watching forums and .onion sites that mention you',
+  'Finding leaked passwords and breach dumps early',
+  'Tracking who is talking about your brand or data',
+  'Checking paste sites like Pastebin for leaks',
+  'Monitoring dark web marketplaces',
+  'Spotting stolen cards and personal data for sale',
+  'Following ransomware leak sites',
+  'Catching fake sites and phishing kits using your name',
 ];
 
 export default function DarkWeb() {
@@ -60,7 +60,7 @@ export default function DarkWeb() {
             <span className="section-label">Dark Web Intel</span>
             <h2 className="section-title">Dark Web <span>Monitoring</span></h2>
             <p className="section-subtitle">
-              Proactive threat intelligence from the depths of the internet's hidden layers
+              Early warning when your data shows up where it should not
             </p>
           </div>
         </Animate>
@@ -82,10 +82,9 @@ export default function DarkWeb() {
                 </h3>
               </div>
               <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
-                The Dark Web is an encrypted overlay network accessible only through specialized software
-                like TOR. It hosts anonymous marketplaces, forums, and communication channels - and is
-                where cybercriminals trade stolen data, sell exploit kits, and coordinate attacks
-                against organizations.
+                The dark web is a hidden part of the internet that needs special tools like TOR to reach.
+                Stolen passwords, company files, and attack tools often get bought and sold there long
+                before a business finds out.
               </p>
             </div>
 
@@ -100,9 +99,9 @@ export default function DarkWeb() {
                 </h3>
               </div>
               <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
-                Breached credentials, leaked intellectual property, and exposed PII appear on dark web
-                forums often before organizations are even aware. Ransomware groups leak victim data,
-                phishing kits get sold, and insider threats sell access - all in the dark.
+                Leaked logins and private data often appear on forums first. Ransomware crews dump
+                victim files, phishing kits get sold cheaply, and sometimes insiders sell access.
+                Waiting until customers complain is usually too late.
               </p>
             </div>
 
