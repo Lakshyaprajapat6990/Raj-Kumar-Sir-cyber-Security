@@ -68,9 +68,9 @@ const skillCategories = [
 function SkillBar({ name, level, animate }) {
   return (
     <div style={{ marginBottom: 12 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-        <span style={{ fontSize: 16, color: 'var(--text)' }}>{name}</span>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--cyan)' }}>{level}%</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, gap: 8 }}>
+        <span style={{ fontSize: 15, color: 'var(--text)' }}>{name}</span>
+        <span style={{ fontFamily: 'var(--mono)', fontSize: 14, color: 'var(--cyan)', flexShrink: 0 }}>{level}%</span>
       </div>
       <div style={{ height: 4, background: 'rgba(10,12,8,0.08)', borderRadius: 2, overflow: 'hidden' }}>
         <div style={{
@@ -86,24 +86,52 @@ function SkillBar({ name, level, animate }) {
   );
 }
 
+function SkillCard({ cat, animate }) {
+  const { Icon } = cat;
+  return (
+    <div className="glow-card skill-marquee-card">
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+        <div style={{
+          width: 36, height: 36, borderRadius: 8,
+          background: 'rgba(212,248,74,0.12)', border: '1px solid rgba(107,143,0,0.25)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          flexShrink: 0,
+        }}>
+          <Icon size={18} color="var(--cyan)" strokeWidth={1.5} />
+        </div>
+        <h3 style={{
+          fontFamily: 'var(--display)', fontSize: 16, fontWeight: 700,
+          color: 'var(--accent)', lineHeight: 1.3,
+        }}>
+          {cat.title}
+        </h3>
+      </div>
+      {cat.skills.map((sk, j) => (
+        <SkillBar key={j} {...sk} animate={animate} />
+      ))}
+    </div>
+  );
+}
+
 export default function Skills() {
   const ref = useRef(null);
   const [animate, setAnimate] = useState(false);
+  const loop = [...skillCategories, ...skillCategories];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setAnimate(true); },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="skills" ref={ref} style={{ padding: '100px 0', background: 'var(--bg)' }}>
-      <div className="container">
+    <section id="skills" ref={ref} style={{ padding: '100px 0', background: 'var(--bg)', overflow: 'hidden' }}>
+      <div className="container" style={{ marginBottom: 36 }}>
         <Animate type="fadeDown">
-          <div className="section-header">
+          <div className="section-header" style={{ marginBottom: 8 }}>
             <span className="section-label">Technical Expertise</span>
             <h2 className="section-title">Skills <span>&amp; Expertise</span></h2>
             <p className="section-subtitle">
@@ -111,37 +139,13 @@ export default function Skills() {
             </p>
           </div>
         </Animate>
+      </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-          gap: 28,
-        }}>
-          {skillCategories.map((cat, i) => {
-            const { Icon } = cat;
-            const dirs = ['fadeLeft','fadeUp','fadeRight','fadeLeft','fadeUp','fadeRight'];
-            return (
-              <Animate key={i} type={dirs[i % 6]} delay={`${(i % 3) * 0.15}s`}>
-              <div className="glow-card" style={{ height: '100%' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-                  <div style={{
-                    width: 36, height: 36, borderRadius: 8,
-                    background: 'rgba(212,248,74,0.08)', border: '1px solid rgba(212,248,74,0.15)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <Icon size={18} color="var(--cyan)" strokeWidth={1.5} />
-                  </div>
-                  <h3 style={{ fontFamily: 'var(--mono)', fontSize: 17, color: 'var(--cyan)' }}>
-                    {cat.title}
-                  </h3>
-                </div>
-                {cat.skills.map((sk, j) => (
-                  <SkillBar key={j} {...sk} animate={animate} />
-                ))}
-              </div>
-              </Animate>
-            );
-          })}
+      <div className="marquee-wrapper">
+        <div className="marquee-track marquee-float">
+          {loop.map((cat, i) => (
+            <SkillCard key={`skill-${i}`} cat={cat} animate={animate} />
+          ))}
         </div>
       </div>
     </section>

@@ -125,8 +125,9 @@ function PublicSite() {
       <Navbar />
       <main>
         <Hero />
+        <RajCyberOfferings part="cloud" />
         <Services />
-        <RajCyberOfferings />
+        <RajCyberOfferings part="more" />
         <Skills />
         <Certifications />
         <DarkWeb />

@@ -293,12 +293,28 @@ section { position: relative; z-index: 1; }
   min-height: 340px;
 }
 
+.skill-marquee-card {
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  height: auto;
+  min-height: 300px;
+}
+
 @media (max-width: 768px) {
   .service-marquee-card {
     width: 78vw;
     min-width: 78vw;
     max-width: 78vw;
     min-height: 300px;
+    padding: 20px;
+  }
+  .skill-marquee-card {
+    width: 78vw;
+    min-width: 78vw;
+    max-width: 78vw;
+    min-height: 280px;
     padding: 20px;
   }
   .marquee-float {

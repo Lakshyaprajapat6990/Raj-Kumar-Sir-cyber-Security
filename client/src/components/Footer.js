@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { Shield, Mail, Phone, MapPin, Zap, Link2, GitBranch, MessageSquare, Lock } from 'lucide-react';
 
-const quickLinks = ['Services', 'rajcyber', 'Digital', 'NetSec', 'Dark Web', 'Why Us', 'Contact'];
-const linkTargets = ['services', 'rajcyber', 'digital', 'netsec', 'darkweb', 'why', 'contact'];
+const quickLinks = ['Cloud & Resiliency', 'Services', 'Digital', 'NetSec', 'Dark Web', 'Why Us', 'Contact'];
+const linkTargets = ['rajcyber', 'services', 'digital', 'netsec', 'darkweb', 'why', 'contact'];
 
 const serviceList = [
   'rajcyber DaaS',

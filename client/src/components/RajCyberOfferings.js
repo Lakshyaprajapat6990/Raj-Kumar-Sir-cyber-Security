@@ -105,10 +105,14 @@ const KnowMore = () => (
   </Link>
 );
 
-export default function RajCyberOfferings() {
+export default function RajCyberOfferings({ part = 'all' }) {
+  const showCloud = part === 'all' || part === 'cloud';
+  const showMore = part === 'all' || part === 'more';
+
   return (
     <>
       {/* ── Cloud & Resiliency ── */}
+      {showCloud && (
       <section id="rajcyber" style={{ padding: '100px 0', background: 'var(--bg)' }}>
         <div className="container">
           <Animate type="fadeDown">
@@ -221,8 +225,11 @@ export default function RajCyberOfferings() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Digital Services ── */}
+      {showMore && (
+      <>
       <section id="digital" style={{ padding: '100px 0', background: 'var(--bg2)' }}>
         <div className="container">
           <Animate type="fadeDown">
@@ -433,6 +440,8 @@ export default function RajCyberOfferings() {
           </Animate>
         </div>
       </section>
+      </>
+      )}
 
       <style>{`
         @media (max-width: 900px) {

@@ -3,8 +3,8 @@ import { Link } from 'react-scroll';
 import { Menu, X, Shield, ArrowUpRight } from 'lucide-react';
 
 const links = [
+  { to: 'rajcyber', label: 'Cloud & Resiliency' },
   { to: 'services', label: 'Services' },
-  { to: 'rajcyber', label: 'rajcyber' },
   { to: 'digital', label: 'Digital' },
   { to: 'netsec', label: 'NetSec' },
   { to: 'skills', label: 'Skills' },
