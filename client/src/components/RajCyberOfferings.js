@@ -59,13 +59,55 @@ const gpuCards = [
 ];
 
 const digitalServices = [
-  { Icon: GraduationCap, title: 'LMS setup and branding', desc: 'We get your learning platform live and looking like your brand' },
-  { Icon: Plug, title: 'System integration', desc: 'Connect LMS with HR, CRM, and the tools your team already uses' },
-  { Icon: ArrowUpCircle, title: 'Migrations and upgrades', desc: 'Move platforms with as little downtime and stress as possible' },
-  { Icon: Server, title: 'Hosting and infrastructure', desc: 'Keep the platform stable, secure, and available' },
-  { Icon: Users, title: 'Day-to-day administration', desc: 'Users, courses, catalogs, and routine updates handled for you' },
-  { Icon: Headphones, title: 'Technical support', desc: 'Help for learners and admins when something gets stuck' },
-  { Icon: BarChart3, title: 'Performance and analytics', desc: 'Useful reports and dashboards so you can see what is working' },
+  {
+    Icon: GraduationCap,
+    title: 'LMS setup and branding',
+    desc: 'We get your learning platform live and looking like your brand.',
+    points: ['Custom theme', 'Role setup', 'Go-live checklist'],
+    badge: 'LMS',
+  },
+  {
+    Icon: Plug,
+    title: 'System integration',
+    desc: 'Connect LMS with HR, CRM, and the tools your team already uses.',
+    points: ['HRIS sync', 'SSO ready', 'API connectors'],
+    badge: 'Integrate',
+  },
+  {
+    Icon: ArrowUpCircle,
+    title: 'Migrations and upgrades',
+    desc: 'Move platforms with as little downtime and stress as possible.',
+    points: ['Data mapping', 'Cutover plan', 'Rollback safety'],
+    badge: 'Migrate',
+  },
+  {
+    Icon: Server,
+    title: 'Hosting and infrastructure',
+    desc: 'Keep the platform stable, secure, and available.',
+    points: ['Uptime watch', 'Secure hosting', 'Backup cover'],
+    badge: 'Host',
+  },
+  {
+    Icon: Users,
+    title: 'Day-to-day administration',
+    desc: 'Users, courses, catalogs, and routine updates handled for you.',
+    points: ['User mgmt', 'Catalog care', 'Access control'],
+    badge: 'Admin',
+  },
+  {
+    Icon: Headphones,
+    title: 'Technical support',
+    desc: 'Help for learners and admins when something gets stuck.',
+    points: ['Help desk', 'Ticket triage', 'Fast answers'],
+    badge: 'Support',
+  },
+  {
+    Icon: BarChart3,
+    title: 'Performance and analytics',
+    desc: 'Useful reports and dashboards so you can see what is working.',
+    points: ['Live dashboards', 'Learner insights', 'KPI reports'],
+    badge: 'Analytics',
+  },
 ];
 
 const securityNodes = [
@@ -248,26 +290,77 @@ export default function RajCyberOfferings({ part = 'all' }) {
             {[...digitalServices, ...digitalServices].map((s, i) => {
               const { Icon } = s;
               return (
-                <div key={`digital-${i}`} className="glow-card marquee-card">
+                <div key={`digital-${i}`} className="glow-card marquee-card" style={{ paddingBottom: 18 }}>
                   <div style={{
-                    width: 44, height: 44, borderRadius: 12,
-                    background: 'rgba(212,248,74,0.18)',
-                    border: '1px solid rgba(107,143,0,0.28)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    marginBottom: 16,
-                    flexShrink: 0,
+                    display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+                    gap: 12, marginBottom: 14,
                   }}>
-                    <Icon size={20} color="var(--accent)" strokeWidth={1.6} />
+                    <div style={{
+                      width: 48, height: 48, borderRadius: 12,
+                      background: 'rgba(212,248,74,0.22)',
+                      border: '1px solid rgba(107,143,0,0.3)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      flexShrink: 0,
+                    }}>
+                      <Icon size={22} color="var(--accent)" strokeWidth={1.6} />
+                    </div>
+                    <span style={{
+                      fontFamily: 'var(--mono)', fontSize: 11, fontWeight: 700,
+                      letterSpacing: 1, textTransform: 'uppercase',
+                      color: 'var(--accent)',
+                      background: 'rgba(212,248,74,0.2)',
+                      border: '1px solid rgba(107,143,0,0.25)',
+                      borderRadius: 999, padding: '5px 10px',
+                    }}>
+                      {s.badge}
+                    </span>
                   </div>
+
                   <h3 style={{
                     fontFamily: 'var(--display)', fontSize: 17, fontWeight: 700,
                     color: 'var(--text)', marginBottom: 10, lineHeight: 1.35,
                   }}>
                     {s.title}
                   </h3>
-                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, flexGrow: 1 }}>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 16 }}>
                     {s.desc}
                   </p>
+
+                  <div style={{
+                    display: 'flex', flexDirection: 'column', gap: 8,
+                    padding: '14px 14px',
+                    borderRadius: 12,
+                    background: 'linear-gradient(180deg, rgba(212,248,74,0.12), rgba(244,245,241,0.9))',
+                    border: '1px solid rgba(107,143,0,0.16)',
+                    marginBottom: 16,
+                    flexGrow: 1,
+                  }}>
+                    {s.points.map((p) => (
+                      <div key={p} style={{
+                        display: 'flex', alignItems: 'center', gap: 8,
+                        fontSize: 13, color: 'var(--text)', fontWeight: 500,
+                      }}>
+                        <span style={{
+                          width: 6, height: 6, borderRadius: '50%',
+                          background: 'var(--primary-hover)', flexShrink: 0,
+                        }} />
+                        {p}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                    marginTop: 'auto', paddingTop: 4,
+                  }}>
+                    <span style={{
+                      fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--muted)',
+                      letterSpacing: 0.5,
+                    }}>
+                      rajcyber
+                    </span>
+                    <KnowMore />
+                  </div>
                 </div>
               );
             })}
