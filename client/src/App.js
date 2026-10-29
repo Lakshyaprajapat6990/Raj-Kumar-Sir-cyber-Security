@@ -8,7 +8,6 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import RajCyberOfferings from './components/RajCyberOfferings';
 import Skills from './components/Skills';
-import CodingLanguages from './components/CodingLanguages';
 import Certifications from './components/Certifications';
 import DarkWeb from './components/DarkWeb';
 import Process from './components/Process';
@@ -130,7 +129,6 @@ function PublicSite() {
         <Services />
         <RajCyberOfferings part="more" />
         <Skills />
-        <CodingLanguages />
         <Certifications />
         <DarkWeb />
         <Process />
