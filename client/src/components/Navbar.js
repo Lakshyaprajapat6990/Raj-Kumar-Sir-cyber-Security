@@ -8,6 +8,7 @@ const links = [
   { to: 'digital', label: 'Digital' },
   { to: 'netsec', label: 'NetSec' },
   { to: 'skills', label: 'Skills' },
+  { to: 'languages', label: 'Languages' },
   { to: 'darkweb', label: 'Dark Web' },
   { to: 'why', label: 'Why Us' },
   { to: 'contact', label: 'Contact' },

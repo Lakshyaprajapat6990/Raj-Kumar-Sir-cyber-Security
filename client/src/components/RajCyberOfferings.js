@@ -230,10 +230,10 @@ export default function RajCyberOfferings({ part = 'all' }) {
       {/* ── Digital Services ── */}
       {showMore && (
       <>
-      <section id="digital" style={{ padding: '100px 0', background: 'var(--bg2)' }}>
-        <div className="container">
+      <section id="digital" style={{ padding: '100px 0', background: 'var(--bg2)', overflow: 'hidden' }}>
+        <div className="container" style={{ marginBottom: 36 }}>
           <Animate type="fadeDown">
-            <div className="section-header">
+            <div className="section-header" style={{ marginBottom: 8 }}>
               <span className="section-label">platforms & learning</span>
               <h2 className="section-title">Digital Services | <span>rajcyber</span> Technologies</h2>
               <p className="section-subtitle">
@@ -241,34 +241,34 @@ export default function RajCyberOfferings({ part = 'all' }) {
               </p>
             </div>
           </Animate>
+        </div>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: 20,
-          }}>
-            {digitalServices.map((s, i) => {
+        <div className="marquee-wrapper">
+          <div className="marquee-track marquee-float">
+            {[...digitalServices, ...digitalServices].map((s, i) => {
               const { Icon } = s;
               return (
-                <Animate key={i} type="fadeUp" delay={`${(i % 4) * 0.08}s`}>
-                  <div className="glow-card" style={{ height: '100%' }}>
-                    <div style={{
-                      width: 44, height: 44, borderRadius: 12,
-                      background: 'rgba(212,248,74,0.18)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      marginBottom: 14,
-                    }}>
-                      <Icon size={20} color="var(--accent)" strokeWidth={1.6} />
-                    </div>
-                    <h3 style={{
-                      fontFamily: 'var(--display)', fontSize: 16, fontWeight: 700,
-                      color: 'var(--text)', marginBottom: 8,
-                    }}>
-                      {s.title}
-                    </h3>
-                    <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.7 }}>{s.desc}</p>
+                <div key={`digital-${i}`} className="glow-card marquee-card">
+                  <div style={{
+                    width: 44, height: 44, borderRadius: 12,
+                    background: 'rgba(212,248,74,0.18)',
+                    border: '1px solid rgba(107,143,0,0.28)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: 16,
+                    flexShrink: 0,
+                  }}>
+                    <Icon size={20} color="var(--accent)" strokeWidth={1.6} />
                   </div>
-                </Animate>
+                  <h3 style={{
+                    fontFamily: 'var(--display)', fontSize: 17, fontWeight: 700,
+                    color: 'var(--text)', marginBottom: 10, lineHeight: 1.35,
+                  }}>
+                    {s.title}
+                  </h3>
+                  <p style={{ fontSize: 15, color: 'var(--muted)', lineHeight: 1.75, flexGrow: 1 }}>
+                    {s.desc}
+                  </p>
+                </div>
               );
             })}
           </div>

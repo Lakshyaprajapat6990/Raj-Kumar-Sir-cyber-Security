@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Wifi, Globe, Search, UserCheck, Bug, ClipboardList } from 'lucide-react';
+import {
+  Wifi, Globe, Search, UserCheck, Bug, ClipboardList,
+  Cloud, Crosshair, KeyRound, Terminal, Radar,
+} from 'lucide-react';
 import Animate from './Animate';
 
 const skillCategories = [
@@ -63,6 +66,56 @@ const skillCategories = [
       { name: 'PCI-DSS', level: 78 },
     ],
   },
+  {
+    title: 'Cloud Security',
+    Icon: Cloud,
+    skills: [
+      { name: 'AWS Security', level: 86 },
+      { name: 'Azure Security', level: 82 },
+      { name: 'GCP Hardening', level: 78 },
+      { name: 'Cloud IAM Reviews', level: 84 },
+    ],
+  },
+  {
+    title: 'Penetration Testing',
+    Icon: Crosshair,
+    skills: [
+      { name: 'External / Internal PT', level: 90 },
+      { name: 'Metasploit', level: 86 },
+      { name: 'Nmap & Recon', level: 92 },
+      { name: 'Report Writing', level: 88 },
+    ],
+  },
+  {
+    title: 'Cryptography',
+    Icon: KeyRound,
+    skills: [
+      { name: 'PKI & Certificates', level: 88 },
+      { name: 'TLS / SSL', level: 90 },
+      { name: 'Key Management', level: 84 },
+      { name: 'Encryption Design', level: 80 },
+    ],
+  },
+  {
+    title: 'Linux & Server Admin',
+    Icon: Terminal,
+    skills: [
+      { name: 'Server Hardening', level: 90 },
+      { name: 'SELinux / AppArmor', level: 78 },
+      { name: 'Patch Management', level: 86 },
+      { name: 'Bash Automation', level: 88 },
+    ],
+  },
+  {
+    title: 'SIEM & Monitoring',
+    Icon: Radar,
+    skills: [
+      { name: 'Log Correlation', level: 84 },
+      { name: 'Alert Tuning', level: 82 },
+      { name: 'Threat Detection', level: 86 },
+      { name: 'Incident Triage', level: 88 },
+    ],
+  },
 ];
 
 function SkillBar({ name, level, animate }) {
@@ -89,18 +142,18 @@ function SkillBar({ name, level, animate }) {
 function SkillCard({ cat, animate }) {
   const { Icon } = cat;
   return (
-    <div className="glow-card skill-marquee-card">
+    <div className="glow-card marquee-card">
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
         <div style={{
-          width: 36, height: 36, borderRadius: 8,
+          width: 44, height: 44, borderRadius: 12,
           background: 'rgba(212,248,74,0.12)', border: '1px solid rgba(107,143,0,0.25)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           flexShrink: 0,
         }}>
-          <Icon size={18} color="var(--cyan)" strokeWidth={1.5} />
+          <Icon size={20} color="var(--cyan)" strokeWidth={1.5} />
         </div>
         <h3 style={{
-          fontFamily: 'var(--display)', fontSize: 16, fontWeight: 700,
+          fontFamily: 'var(--display)', fontSize: 17, fontWeight: 700,
           color: 'var(--accent)', lineHeight: 1.3,
         }}>
           {cat.title}
