@@ -11,7 +11,7 @@ const skillCategories = [
     Icon: Wifi,
     skills: [
       { name: 'Firewall Configuration', level: 92 },
-      { name: 'VPN & IPSec', level: 88 },
+      { name: 'VPN & IPsec', level: 88 },
       { name: 'IDS/IPS Systems', level: 85 },
       { name: 'Network Traffic Analysis', level: 90 },
     ],
@@ -43,7 +43,7 @@ const skillCategories = [
       { name: 'Active Directory', level: 85 },
       { name: 'OAuth / SAML / SSO', level: 82 },
       { name: 'Zero Trust Architecture', level: 80 },
-      { name: 'Privileged Access Mgmt', level: 78 },
+      { name: 'Privileged Access Management', level: 78 },
     ],
   },
   {
@@ -80,7 +80,7 @@ const skillCategories = [
     title: 'Penetration Testing',
     Icon: Crosshair,
     skills: [
-      { name: 'External / Internal PT', level: 90 },
+      { name: 'External / Internal Pen Testing', level: 90 },
       { name: 'Metasploit', level: 86 },
       { name: 'Nmap & Recon', level: 92 },
       { name: 'Report Writing', level: 88 },

@@ -11,17 +11,17 @@ const featured = [
   {
     Icon: Monitor,
     title: 'Desktop-as-a-Service',
-    desc: 'With rajcyber DaaS, your team gets secure cloud desktops and apps without heavy local setup. You pay for what you use, and people can work from almost anywhere.',
+    desc: 'With Rajcyber DaaS, your team gets secure cloud desktops and apps without heavy local setup. You pay for what you use, and people can work from almost anywhere.',
   },
   {
     Icon: RefreshCw,
     title: 'Business Resiliency Services',
-    desc: 'rajcyber helps you plan for the bad day before it happens: risk checks, DR design, and hands-on recovery setup so the business can keep moving.',
+    desc: 'Rajcyber helps you plan for the bad day before it happens: risk checks, DR design, and hands-on recovery setup so the business can keep moving.',
   },
   {
     Icon: Boxes,
-    title: 'rajcyber CloudInfinit Kubernetes Service (CKS)',
-    desc: 'Your developers stay focused on building. rajcyber handles the Kubernetes cluster, security, scaling, and recovery so day-to-day ops feel lighter.',
+    title: 'Rajcyber CloudInfinit Kubernetes Service (CKS)',
+    desc: 'Your developers stay focused on building. Rajcyber handles the Kubernetes cluster, security, scaling, and recovery so day-to-day ops feel lighter.',
   },
 ];
 
@@ -29,7 +29,7 @@ const cloudOfferings = [
   {
     Icon: Cloud,
     title: 'Hosted Private Cloud',
-    desc: 'rajcyber CloudInfinit gives you a private cloud stack you can shape: compute, network, storage, security, VDI, backup, and DR, ready to use and billed as you grow.',
+    desc: 'Rajcyber CloudInfinit gives you a private cloud stack you can shape: compute, network, storage, security, VDI, backup, and DR, ready to use and billed as you grow.',
   },
   {
     Icon: Globe2,
@@ -61,49 +61,49 @@ const gpuCards = [
 const digitalServices = [
   {
     Icon: GraduationCap,
-    title: 'LMS setup and branding',
+    title: 'LMS Setup and Branding',
     desc: 'We get your learning platform live and looking like your brand.',
     points: ['Custom theme', 'Role setup', 'Go-live checklist'],
     badge: 'LMS',
   },
   {
     Icon: Plug,
-    title: 'System integration',
+    title: 'System Integration',
     desc: 'Connect LMS with HR, CRM, and the tools your team already uses.',
     points: ['HRIS sync', 'SSO ready', 'API connectors'],
     badge: 'Integrate',
   },
   {
     Icon: ArrowUpCircle,
-    title: 'Migrations and upgrades',
+    title: 'Migrations and Upgrades',
     desc: 'Move platforms with as little downtime and stress as possible.',
     points: ['Data mapping', 'Cutover plan', 'Rollback safety'],
     badge: 'Migrate',
   },
   {
     Icon: Server,
-    title: 'Hosting and infrastructure',
+    title: 'Hosting and Infrastructure',
     desc: 'Keep the platform stable, secure, and available.',
     points: ['Uptime watch', 'Secure hosting', 'Backup cover'],
     badge: 'Host',
   },
   {
     Icon: Users,
-    title: 'Day-to-day administration',
+    title: 'Day-to-Day Administration',
     desc: 'Users, courses, catalogs, and routine updates handled for you.',
-    points: ['User mgmt', 'Catalog care', 'Access control'],
+    points: ['User management', 'Catalog care', 'Access control'],
     badge: 'Admin',
   },
   {
     Icon: Headphones,
-    title: 'Technical support',
+    title: 'Technical Support',
     desc: 'Help for learners and admins when something gets stuck.',
     points: ['Help desk', 'Ticket triage', 'Fast answers'],
     badge: 'Support',
   },
   {
     Icon: BarChart3,
-    title: 'Performance and analytics',
+    title: 'Performance and Analytics',
     desc: 'Useful reports and dashboards so you can see what is working.',
     points: ['Live dashboards', 'Learner insights', 'KPI reports'],
     badge: 'Analytics',
@@ -159,10 +159,10 @@ export default function RajCyberOfferings({ part = 'all' }) {
         <div className="container">
           <Animate type="fadeDown">
             <div className="section-header">
-              <span className="section-label">rajcyber offerings</span>
+                            <span className="section-label">Rajcyber Offerings</span>
               <h2 className="section-title">Cloud & <span>Resiliency</span></h2>
               <p className="section-subtitle">
-                Cloud, Kubernetes, and recovery services from rajcyber, explained in plain language
+                Cloud, Kubernetes, and recovery services from Rajcyber, explained in plain language
               </p>
             </div>
           </Animate>
@@ -276,8 +276,8 @@ export default function RajCyberOfferings({ part = 'all' }) {
         <div className="container" style={{ marginBottom: 36 }}>
           <Animate type="fadeDown">
             <div className="section-header" style={{ marginBottom: 8 }}>
-              <span className="section-label">platforms & learning</span>
-              <h2 className="section-title">Digital Services | <span>rajcyber</span> Technologies</h2>
+              <span className="section-label">Platforms & Learning</span>
+              <h2 className="section-title">Digital Services | <span>Rajcyber</span> Technologies</h2>
               <p className="section-subtitle">
                 From first setup to everyday support, so your platforms keep running smoothly
               </p>
@@ -357,7 +357,7 @@ export default function RajCyberOfferings({ part = 'all' }) {
                       fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--muted)',
                       letterSpacing: 0.5,
                     }}>
-                      rajcyber
+                      Rajcyber
                     </span>
                     <KnowMore />
                   </div>
@@ -376,16 +376,16 @@ export default function RajCyberOfferings({ part = 'all' }) {
           }} className="rajcyber-2col">
             <Animate type="fadeLeft">
               <div>
-                <span className="section-label">sovereign AI cloud</span>
+                <span className="section-label">Sovereign AI Cloud</span>
                 <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 18 }}>
-                  Intelligence, Scalability &amp; <span>Resilience</span>
+                  Intelligence, Scalability &amp; <span>Resiliency</span>
                 </h2>
                 <p style={{ fontSize: 17, color: 'var(--muted)', lineHeight: 1.8, marginBottom: 20, maxWidth: 560 }}>
                   AI infrastructure that stays under your control, scales when you need it, and does not
                   fall over under pressure.
                 </p>
                 <p style={{ fontSize: 16, color: 'var(--text)', lineHeight: 1.8, maxWidth: 560 }}>
-                  <strong style={{ color: 'var(--accent)' }}>rajcyber CloudInfinit+AI</strong> gives teams
+                  <strong style={{ color: 'var(--accent)' }}>Rajcyber CloudInfinit+AI</strong> gives teams
                   GPU power and a solid place to build, without handing over security or data control.
                 </p>
                 <KnowMore />
@@ -401,7 +401,7 @@ export default function RajCyberOfferings({ part = 'all' }) {
                 }}>
                   <Ship size={22} color="var(--accent)" />
                   <h3 style={{ fontFamily: 'var(--display)', fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>
-                    BRaaS Business Resiliency-as-a-Service
+                    BRaaS: Business Resiliency-as-a-Service
                   </h3>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
@@ -437,7 +437,7 @@ export default function RajCyberOfferings({ part = 'all' }) {
           }} className="rajcyber-2col">
             <Animate type="fadeLeft">
               <div>
-                <span className="section-label">managed security</span>
+                <span className="section-label">Managed Security</span>
                 <h2 className="section-title" style={{ textAlign: 'left' }}>
                   Advanced Network <span>Security</span>
                 </h2>
@@ -446,7 +446,7 @@ export default function RajCyberOfferings({ part = 'all' }) {
                   from last year is rarely enough on its own.
                 </p>
                 <p style={{ fontSize: 16, color: 'var(--text)', lineHeight: 1.8, maxWidth: 560 }}>
-                  <strong style={{ color: 'var(--accent)' }}>rajcyber&apos;s</strong> managed network
+                  <strong style={{ color: 'var(--accent)' }}>Rajcyber&apos;s</strong> managed network
                   security brings the people, tools, and monitoring together so offices, data centres,
                   and cloud networks stay protected as one picture.
                 </p>
@@ -459,13 +459,13 @@ export default function RajCyberOfferings({ part = 'all' }) {
                   fontSize: 14, color: 'var(--muted)', lineHeight: 1.7, marginBottom: 20,
                 }}>
                   Helping manage 5,000+ firewalls across client sites,{' '}
-                  <strong style={{ color: 'var(--accent)' }}>rajcyber</strong> data centres, and major public clouds
+                  <strong style={{ color: 'var(--accent)' }}>Rajcyber</strong> data centers, and major public clouds
                 </p>
                 <h4 style={{
                   fontFamily: 'var(--display)', fontSize: 16, fontWeight: 700,
                   color: 'var(--text)', marginBottom: 16, textAlign: 'center',
                 }}>
-                  One view of network security
+                  One View of Network Security
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {securityNodes.map((n) => (
@@ -495,8 +495,8 @@ export default function RajCyberOfferings({ part = 'all' }) {
         <div className="container">
           <Animate type="fadeDown">
             <div className="section-header">
-              <span className="section-label">global reach</span>
-              <h2 className="section-title">rajcyber <span>Presence</span></h2>
+              <span className="section-label">Global Reach</span>
+              <h2 className="section-title">Rajcyber <span>Presence</span></h2>
               <p className="section-subtitle">
                 Teams and partners across Africa, the Middle East, and Asia
               </p>

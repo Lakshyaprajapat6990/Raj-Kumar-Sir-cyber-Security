@@ -82,7 +82,7 @@ export default function DarkWeb() {
                 </h3>
               </div>
               <p style={{ fontSize: 16, color: 'var(--muted)', lineHeight: 1.8 }}>
-                The dark web is a hidden part of the internet that needs special tools like TOR to reach.
+                The dark web is a hidden part of the internet that needs special tools like Tor to reach.
                 Stolen passwords, company files, and attack tools often get bought and sold there long
                 before a business finds out.
               </p>

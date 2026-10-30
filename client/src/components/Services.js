@@ -59,7 +59,7 @@ const services = [
     Icon: Eye,
     title: 'IT Dark Web Monitoring & Threat Intelligence',
     desc: 'I watch dark web forums and leak sites for your company name, emails, and data. If something shows up, you hear about it early, while there is still time to act.',
-    tags: ['OSINT', 'Threat Intel', 'Data Breach Detection', 'TOR'],
+    tags: ['OSINT', 'Threat Intel', 'Data Breach Detection', 'Tor'],
     color: '#3f5200',
   },
 ];

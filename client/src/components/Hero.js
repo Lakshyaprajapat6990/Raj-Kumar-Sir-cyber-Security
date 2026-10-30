@@ -7,7 +7,7 @@ const stats = [
   { value: '8+', label: 'Core Certifications', icon: <Award size={16} color="var(--cyan)" /> },
   { value: '24/7', label: 'Incident Response', icon: <Clock size={16} color="var(--cyan)" /> },
   { value: '100%', label: 'Confidentiality', icon: <Lock size={16} color="var(--cyan)" /> },
-  { value: '5+', label: 'Years Experience', icon: <Star size={16} color="var(--cyan)" /> },
+  { value: '5+', label: 'Years of Experience', icon: <Star size={16} color="var(--cyan)" /> },
 ];
 
 const titles = [

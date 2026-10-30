@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { Shield, Mail, Phone, MapPin, Zap, Link2, GitBranch, MessageSquare, Lock } from 'lucide-react';
 
-const quickLinks = ['Cloud & Resiliency', 'Services', 'Digital', 'NetSec', 'Dark Web', 'Why Us', 'Contact'];
+const quickLinks = ['Cloud & Resiliency', 'Services', 'Digital', 'Network Security', 'Dark Web', 'Why Us', 'Contact'];
 const linkTargets = ['rajcyber', 'services', 'digital', 'netsec', 'darkweb', 'why', 'contact'];
 
 const serviceList = [
-  'rajcyber DaaS',
-  'rajcyber CloudInfinit CKS',
+  'Rajcyber DaaS',
+  'Rajcyber CloudInfinit CKS',
   'Hosted Private Cloud',
   'Managed Public Cloud',
   'CloudInfinit+AI',
@@ -22,7 +22,7 @@ const contactDetails = [
   { Icon: Mail, text: 'inforaj@cybersecuritycloudai.com', href: 'mailto:inforaj@cybersecuritycloudai.com' },
   { Icon: Phone, text: '+91 94240 54049', href: 'tel:+919424054049' },
   { Icon: MapPin, text: 'India (Remote Worldwide)', href: null },
-  { Icon: Zap, text: 'Response: <24 hours', href: null },
+  { Icon: Zap, text: 'Response: Within 24 Hours', href: null },
 ];
 
 const socials = [

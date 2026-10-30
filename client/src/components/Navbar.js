@@ -6,7 +6,7 @@ const links = [
   { to: 'rajcyber', label: 'Cloud & Resiliency' },
   { to: 'services', label: 'Services' },
   { to: 'digital', label: 'Digital' },
-  { to: 'netsec', label: 'NetSec' },
+  { to: 'netsec', label: 'Network Security' },
   { to: 'skills', label: 'Skills' },
   { to: 'darkweb', label: 'Dark Web' },
   { to: 'why', label: 'Why Us' },

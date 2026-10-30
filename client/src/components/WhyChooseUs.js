@@ -5,28 +5,28 @@ import Animate from './Animate';
 const reasons = [
   {
     Icon: BadgeCheck,
-    title: 'Real certifications, real work',
+    title: 'Real Certifications, Real Work',
     desc: 'CEH, CCNA, and more are not just logos on a page. They sit on top of years of hands-on work with live systems and real incidents.',
     stats: '8+ Certifications',
     color: '#d4f84a',
   },
   {
     Icon: ShieldOff,
-    title: 'Your secrets stay yours',
+    title: 'Your Secrets Stay Yours',
     desc: 'Every project starts with an NDA. Findings, passwords, and client details stay private. No sharing, no shortcuts.',
     stats: '100% NDA Protected',
     color: '#6b8f00',
   },
   {
     Icon: BellRing,
-    title: 'Help when it matters',
+    title: 'Help When It Matters',
     desc: 'Attacks do not wait for Monday morning. When something looks wrong, you can reach out and get calm, practical support.',
     stats: 'Always Available',
     color: '#dc2626',
   },
   {
     Icon: RefreshCw,
-    title: 'From start to follow-up',
+    title: 'From Start to Follow-Up',
     desc: 'Assessment, fixes, and ongoing checks in one place. You are not left with a report and no idea what to do next.',
     stats: 'Full Lifecycle',
     color: '#6b8f00',
